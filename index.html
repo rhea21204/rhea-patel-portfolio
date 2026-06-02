@@ -3,169 +3,241 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Rhea Patel — CS graduate, builder, and problem solver. Software development, AI tools, cybersecurity, data analysis." />
-  <title>Rhea Patel — CS Grad & Builder</title>
-  <link rel="stylesheet" href="css/global.css" />
-  <link rel="stylesheet" href="css/home.css" />
+  <meta name="description" content="Rhea Patel — CS graduate, builder, and creative problem-solver." />
+  <title>Rhea Patel</title>
+
+  <!-- ✏️ FONTS: Replace this link to swap fonts globally -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
-</head>
-<body>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-  <!-- ===================== NAVIGATION ===================== -->
-  <!-- The "active" class is on the Home link because this is index.html -->
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body class="page-top">
+
+  <!-- ============================================================
+    NAVIGATION
+    ✏️ NAV: Update the resume link below with your actual PDF path
+    ============================================================ -->
   <nav class="nav" id="nav">
-    <a href="index.html" class="nav-logo">RP<span class="dot">.</span></a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html"      class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="experience.html">Experience</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <a href="index.html" class="nav-logo" aria-label="Rhea Patel — Home">Rhea Patel</a>
+
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="about.html"      data-page="about.html">About</a></li>
+        <li><a href="projects.html"   data-page="projects.html">Projects</a></li>
+        <li><a href="experience.html" data-page="experience.html">Work</a></li>
+        <!-- ✏️ RESUME: Replace # with your resume PDF path, e.g. assets/resume/RheaPatel_Resume.pdf -->
+        <li><a href="#" class="nav-resume" target="_blank" rel="noopener">Resume ↗</a></li>
+      </ul>
+
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
-  <!-- ===================== HERO ===================== -->
-  <section class="hero" id="home">
-    <!-- Background decorative text — not read by screen readers -->
-    <div class="hero-bg-word" aria-hidden="true">RHEA</div>
+  <!-- ============================================================
+    HAMBURGER MENU OVERLAY
+    ✏️ MENU: Update email, LinkedIn, GitHub, and resume links below
+    ============================================================ -->
+  <div class="menu-overlay" id="menuOverlay" role="dialog" aria-label="Navigation menu">
+    <nav class="menu-links" aria-label="Main navigation">
+      <a href="index.html"      class="menu-link-item"><span class="menu-num">01</span><span class="menu-label">Home</span></a>
+      <a href="about.html"      class="menu-link-item"><span class="menu-num">02</span><span class="menu-label">About</span></a>
+      <a href="projects.html"   class="menu-link-item"><span class="menu-num">03</span><span class="menu-label">Projects</span></a>
+      <a href="experience.html" class="menu-link-item"><span class="menu-num">04</span><span class="menu-label">Work</span></a>
+      <a href="values.html"     class="menu-link-item"><span class="menu-num">05</span><span class="menu-label">Values</span></a>
+    </nav>
+    <div class="menu-info">
+      <div class="menu-info-group">
+        <p class="menu-info-label">Location</p>
+        <!-- ✏️ LOCATION: Update as needed -->
+        <p class="menu-info-val">Philadelphia, PA<br>/ New Jersey area</p>
+      </div>
+      <div class="menu-info-group">
+        <p class="menu-info-label">Email</p>
+        <div class="menu-info-val">
+          <!-- ✏️ EMAIL: Replace with your email -->
+          <a href="mailto:your@email.com">your@email.com</a>
+        </div>
+      </div>
+      <div class="menu-info-group">
+        <p class="menu-info-label">Social</p>
+        <div class="menu-info-val">
+          <!-- ✏️ SOCIAL: Replace # with your LinkedIn and GitHub URLs -->
+          <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="#" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <div class="menu-info-group">
+        <p class="menu-info-label">Resume</p>
+        <div class="menu-info-val">
+          <!-- ✏️ RESUME: Replace # with your PDF path -->
+          <a href="#" target="_blank" rel="noopener">Download PDF</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <div class="inner hero-inner">
-      <p class="hero-eyebrow">Hello, world. I'm</p>
+  <!-- ============================================================
+    HERO
+    ============================================================ -->
+  <main>
+    <section class="hero">
 
-      <h1 class="hero-name">Rhea<br><em>Patel.</em></h1>
+      <!-- Left fixed column: name + social -->
+      <div class="hero-left">
+        <div class="hero-greeting">
+          <p class="hero-hello">hello, world —</p>
+          <h1 class="hero-name">i'm Rhea<br>Patel.</h1>
+        </div>
 
-      <p class="hero-sub">
-        CS graduate who builds things that actually work — software, AI tools, data systems,
-        and whatever the next interesting problem turns out to be.
-      </p>
+        <div class="hero-social-col">
+          <!-- ✏️ SOCIAL: Replace # with your URLs -->
+          <a href="#" target="_blank" rel="noopener" class="hero-social-link">Instagram</a>
+          <a href="#" target="_blank" rel="noopener" class="hero-social-link">LinkedIn</a>
+          <a href="#" target="_blank" rel="noopener" class="hero-social-link">GitHub</a>
+        </div>
 
-      <!-- Identity tags — edit these to match your current focus -->
-      <div class="hero-tags">
-        <span class="tag">Software Development</span>
-        <span class="tag">AI Tools</span>
-        <span class="tag">Cybersecurity</span>
-        <span class="tag">Data Analysis</span>
-        <span class="tag">Tech Consulting</span>
-        <span class="tag">Technical Communication</span>
+        <!-- Scrolling role labels — appear below social -->
+        <div class="hero-role-list">
+          <div class="hero-role-item">software development</div>
+          <div class="hero-role-item">AI tools</div>
+          <div class="hero-role-item">data analysis</div>
+          <div class="hero-role-item">cybersecurity</div>
+          <div class="hero-role-item">tech consulting</div>
+          <div class="hero-role-item">technical communication</div>
+        </div>
       </div>
 
-      <!-- Primary CTA buttons -->
-      <div class="hero-cta">
-        <a href="projects.html" class="btn btn-primary">View Projects</a>
+      <!-- Center column: numbered callouts + photo area -->
+      <div class="hero-center">
+        <p class="hero-ima">i'm a cs grad who builds things.</p>
+
+        <div class="hero-callouts">
+          <div class="hero-callout">
+            <span class="callout-num">[01]</span>
+            <div class="callout-body">
+              <strong>software development</strong>
+              <p>building apps, tools, and user-focused projects</p>
+            </div>
+          </div>
+          <div class="hero-callout">
+            <span class="callout-num">[02]</span>
+            <div class="callout-body">
+              <strong>AI tools + automation</strong>
+              <p>exploring workflows, agents, and practical AI use cases</p>
+            </div>
+          </div>
+          <div class="hero-callout">
+            <span class="callout-num">[03]</span>
+            <div class="callout-body">
+              <strong>data + cybersecurity</strong>
+              <p>interested in analysis, security basics, and digital systems</p>
+            </div>
+          </div>
+          <div class="hero-callout">
+            <span class="callout-num">[04]</span>
+            <div class="callout-body">
+              <strong>tech/business communication</strong>
+              <p>translating technical ideas into language people understand</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo / image placeholder -->
         <!--
-          TODO: Replace href="#" with your resume link
-          Once you add the PDF: href="assets/RheaPatel_Resume.pdf" target="_blank"
+          ✏️ IMAGE: Replace the placeholder div below with:
+          <img src="assets/images/rhea-photo.jpg" alt="Rhea Patel" class="hero-photo" />
         -->
-        <a href="#" class="btn btn-outline" target="_blank">Resume ↗</a>
-      </div>
-
-      <!-- Secondary links -->
-      <div class="hero-links">
-        <!-- TODO: Replace href="#" with your GitHub URL -->
-        <a href="#" class="hero-link" target="_blank">⌥ GitHub</a>
-        <!-- TODO: Replace href="#" with your LinkedIn URL -->
-        <a href="#" class="hero-link" target="_blank">↗ LinkedIn</a>
-        <a href="contact.html" class="hero-link">✉ Contact</a>
-      </div>
-    </div>
-
-    <p class="hero-scroll" aria-hidden="true">scroll ↓</p>
-  </section>
-
-  <!-- ===================== CURRENTLY ===================== -->
-  <!-- ✏️ Keep this section up to date — recruiters love seeing you're active -->
-  <section class="currently section">
-    <div class="inner">
-      <p class="section-label">Live status</p>
-      <div class="currently-grid">
-
-        <div class="currently-card" data-reveal>
-          <div class="currently-dot building"></div>
-          <div>
-            <p class="currently-label">Currently Building</p>
-            <!-- TODO: Update with your current project -->
-            <p class="currently-val">Temple Crawler app + sharpening Python skills</p>
-          </div>
+        <div class="hero-photo-placeholder">
+          <span>📸 photo coming soon</span>
         </div>
-
-        <div class="currently-card" data-reveal>
-          <div class="currently-dot learning"></div>
-          <div>
-            <p class="currently-label">Currently Learning</p>
-            <!-- TODO: Update as you learn new things -->
-            <p class="currently-val">LLM integrations, Docker, deeper Python workflows</p>
-          </div>
-        </div>
-
-        <div class="currently-card" data-reveal>
-          <div class="currently-dot looking"></div>
-          <div>
-            <p class="currently-label">Currently Looking For</p>
-            <!-- TODO: Update based on your job search -->
-            <p class="currently-val">Entry-level roles in software, AI/data, or tech consulting</p>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
 
-  <!-- ===================== QUICK LOOK ===================== -->
-  <!-- Three cards linking to the most important pages -->
-  <section class="preview section">
-    <div class="inner">
-      <p class="section-label">Quick look</p>
-      <div class="preview-grid">
+      <!-- Right column: status + CTA -->
+      <div class="hero-right">
+        <p class="hero-available">
+          <span class="available-dot"></span>
+          available for entry-level tech roles :)
+        </p>
 
-        <a href="projects.html" class="preview-card" data-reveal>
-          <div class="preview-num">05 Projects</div>
-          <h3>Things I've Built</h3>
-          <p>From Python adventures to web apps solving real community problems.</p>
-          <span class="preview-arrow">→</span>
-        </a>
+        <a href="projects.html" class="btn-pill">view projects →</a>
 
-        <a href="experience.html" class="preview-card" data-reveal>
-          <div class="preview-num">04 Experience</div>
-          <h3>Where I've Worked</h3>
-          <p>Working at the intersection of AI tools, business, and software development.</p>
-          <span class="preview-arrow">→</span>
-        </a>
-
-        <a href="about.html" class="preview-card dark" data-reveal>
-          <div class="preview-num">— About</div>
-          <h3>The Person</h3>
-          <p>How I think, what I build, and where I'm headed.</p>
-          <span class="preview-arrow">→</span>
-        </a>
-
+        <p class="hero-location">☆ based in the Philadelphia<br>/ New Jersey area</p>
       </div>
-    </div>
-  </section>
 
-  <!-- ===================== FOOTER ===================== -->
+    </section>
+
+    <!-- Short about teaser below fold -->
+    <section class="home-bio">
+      <div class="home-bio-inner">
+        <p class="home-bio-text" data-reveal>
+          i think deeply about where technology, people, and communication
+          meet — and how building useful software can make those intersections
+          better. i believe in learning by doing, starting before i'm ready,
+          and making sure what i build actually helps someone.
+        </p>
+        <a href="about.html" class="btn-pill btn-pill-outline" data-reveal>read more about me →</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+    FOOTER — shared on all pages. Copy this block to each page.
+    ✏️ FOOTER: Update email, social links, resume link below
+    ============================================================ -->
   <footer class="footer">
-    <div class="footer-inner">
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <a href="index.html">Home</a>
+    <div class="footer-top">
+      <div>
+        <p class="footer-tagline">Building where tech meets real people</p>
+        <!-- ✏️ EMAIL: Replace with your email -->
+        <a href="mailto:your@email.com" class="footer-email">your@email.com</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-label">Social</p>
+        <!-- ✏️ SOCIAL: Replace # with actual URLs -->
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-label">Sections</p>
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
-        <a href="experience.html">Experience</a>
-        <a href="resume.html">Resume</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <p class="footer-copy">Rhea Patel · <span id="year"></span></p>
-      <p class="footer-sub">Built with curiosity and too many open tabs.</p>
+        <a href="experience.html">Work</a>
+        <a href="values.html">Values</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-label">Resume</p>
+        <!-- ✏️ RESUME: Replace # with PDF path -->
+        <a href="#" target="_blank" rel="noopener">Download PDF</a>
+      </div>
+    </div>
+
+    <!-- Scrolling marquee -->
+    <div class="footer-marquee" aria-hidden="true">
+      <div class="footer-marquee-inner">
+        <span>Rhea Patel ✦</span>
+        <span>Rhea Patel ✦</span>
+        <span>Rhea Patel ✦</span>
+        <span>Rhea Patel ✦</span>
+        <span>Rhea Patel ✦</span>
+        <span>Rhea Patel ✦</span>
+        <span>Rhea Patel ✦</span>
+        <span>Rhea Patel ✦</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Rhea Patel.</p>
+      <p>built with curiosity + too many open tabs</p>
+      <!-- ✏️ LOCATION: Update as needed -->
+      <p>currently in: Philadelphia / New Jersey area</p>
     </div>
   </footer>
 
-  <!-- JS: main.js on every page, home.js only here -->
   <script src="js/main.js"></script>
-  <script src="js/home.js"></script>
 </body>
 </html>

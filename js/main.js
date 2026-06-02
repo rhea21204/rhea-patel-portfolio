@@ -1,75 +1,140 @@
-/* =====================================================
+/* =============================================================
    js/main.js — Loaded on every page
-   Handles: nav scroll, mobile toggle, active link,
-            scroll-reveal animations, footer year
-   ===================================================== */
+
+   Handles: custom cursor, nav hamburger, scroll reveal,
+            active nav link, footer year
+   ============================================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ── Footer: current year ──────────────────────────────
-  const yearEl = document.getElementById('year');
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
+  /* ── Footer year ─────────────────────────────────────────── */
+  const yr = document.getElementById('year');
+  if (yr) yr.textContent = new Date().getFullYear();
 
 
-  // ── Nav: add shadow when scrolled ────────────────────
+  /* ── Custom cursor ───────────────────────────────────────── */
+  /* ✏️ CURSOR: Change cursorChar to any symbol you prefer     */
+  const cursorChar = '✦';
+
+  const isTouchDevice = () =>
+    window.matchMedia('(pointer: coarse)').matches ||
+    'ontouchstart' in window;
+
+  if (!isTouchDevice()) {
+    // Create star element
+    const star = document.createElement('div');
+    star.className = 'cursor cursor-star';
+    star.textContent = cursorChar;
+    document.body.appendChild(star);
+
+    let mouseX = -100, mouseY = -100;
+    let starX   = -100, starY   = -100;
+    let rot = 0;
+
+    document.addEventListener('mousemove', e => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    // Smooth lag follow
+    function animateCursor() {
+      // Lerp toward mouse
+      starX += (mouseX - starX) * 0.14;
+      starY += (mouseY - starY) * 0.14;
+      rot += 0.6; // slow continuous rotation
+
+      star.style.left      = starX + 'px';
+      star.style.top       = starY + 'px';
+      star.style.transform = `translate(-50%, -50%) rotate(${rot}deg)`;
+
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    // Scale up on interactive elements
+    document.querySelectorAll('a, button').forEach(el => {
+      el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+      el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+    });
+
+    // Hide when leaving window
+    document.addEventListener('mouseleave', () => { star.style.opacity = '0'; });
+    document.addEventListener('mouseenter', () => { star.style.opacity = '1'; });
+  }
+
+
+  /* ── Nav scroll shadow ───────────────────────────────────── */
   const nav = document.querySelector('.nav');
   if (nav) {
     window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 20);
+      nav.style.borderBottomColor =
+        window.scrollY > 10 ? 'rgba(0,0,0,0.12)' : '';
     }, { passive: true });
   }
 
 
-  // ── Nav: mobile hamburger toggle ─────────────────────
-  const navToggle = document.getElementById('navToggle');
-  const navLinks  = document.getElementById('navLinks');
+  /* ── Hamburger menu ──────────────────────────────────────── */
+  const hamburger = document.getElementById('hamburger');
+  const menuOverlay = document.getElementById('menuOverlay');
 
-  if (navToggle && navLinks) {
-    navToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
+  if (hamburger && menuOverlay) {
+    hamburger.addEventListener('click', () => {
+      const isOpen = menuOverlay.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      // Prevent body scroll when menu open
+      document.body.style.overflow = isOpen ? 'hidden' : '';
     });
-    // Close menu when any link is clicked
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => navLinks.classList.remove('open'));
+
+    // Close menu on any link click
+    menuOverlay.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuOverlay.classList.remove('open');
+        hamburger.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        menuOverlay.classList.remove('open');
+        hamburger.classList.remove('open');
+        document.body.style.overflow = '';
+      }
     });
   }
 
 
-  // ── Nav: highlight the current page link ─────────────
-  // Gets the filename from the URL, e.g. "about.html"
+  /* ── Active nav link ─────────────────────────────────────── */
+  // Highlights the nav link matching the current page filename
   const currentFile = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    const href = link.getAttribute('href');
-    if (href === currentFile || (currentFile === '' && href === 'index.html')) {
-      link.classList.add('active');
-    }
+  document.querySelectorAll('.nav-links a[data-page]').forEach(link => {
+    if (link.dataset.page === currentFile) link.classList.add('active');
   });
 
 
-  // ── Scroll reveal: fade-up elements with data-reveal ─
-  // Any element with data-reveal="true" (or just data-reveal)
-  // will fade in as you scroll down to it.
+  /* ── Scroll reveal ───────────────────────────────────────── */
+  // Add data-reveal to any element to get the fade-up animation
   const revealEls = document.querySelectorAll('[data-reveal]');
-
   if (revealEls.length) {
     revealEls.forEach(el => el.classList.add('reveal'));
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
         if (entry.isIntersecting) {
-          // Stagger siblings slightly so groups of cards animate in sequence
+          // Stagger siblings
           const siblings = Array.from(
             entry.target.parentElement?.querySelectorAll('[data-reveal]') || []
           );
           const idx = siblings.indexOf(entry.target);
-          entry.target.style.transitionDelay = `${idx * 0.08}s`;
+          entry.target.style.transitionDelay = `${idx * 0.07}s`;
           entry.target.classList.add('visible');
-          observer.unobserve(entry.target); // Only animate once
+          obs.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 
-    revealEls.forEach(el => observer.observe(el));
+    revealEls.forEach(el => obs.observe(el));
   }
 
 });
