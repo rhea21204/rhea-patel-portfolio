@@ -1,0 +1,55 @@
+/* css/resume.css */
+
+.resume-section { background: var(--cream-light); }
+
+.resume-card {
+  background: var(--cream); border: 1px solid var(--cream-dark);
+  border-radius: var(--radius-lg); padding: 3rem;
+  display: grid; grid-template-columns: 1.5fr 1fr;
+  gap: 3rem; align-items: center;
+  margin-bottom: 3rem; box-shadow: var(--shadow);
+}
+.resume-icon  { font-size: 2rem; margin-bottom: 1rem; }
+.resume-left h2 { font-family: var(--font-display); font-size: 1.85rem; font-weight: 900; color: var(--ink); margin-bottom: 1rem; }
+.resume-left p  { font-size: 1rem; color: var(--ink-soft); line-height: 1.8; margin-bottom: 2rem; max-width: 480px; }
+.resume-btns    { display: flex; flex-wrap: wrap; gap: 1rem; }
+
+/* Visual resume mockup */
+.resume-preview {
+  background: var(--cream-light); border: 1px solid var(--cream-dark);
+  border-radius: var(--radius); padding: 1.75rem;
+  position: relative; min-height: 280px;
+  display: flex; flex-direction: column; gap: 0.45rem;
+}
+.rp-name-line { height: 12px; border-radius: 4px; background: var(--ink); width: 60%; }
+.rp-line      { height: 8px;  border-radius: 4px; background: var(--cream-dark); }
+.rp-line.wide   { width: 90%; }
+.rp-line.medium { width: 65%; }
+.rp-line.short  { width: 35%; }
+.rp-divider     { height: 1px; background: var(--cream-dark); margin: 0.25rem 0; }
+.rp-section-head { height: 7px; width: 28%; border-radius: 4px; background: var(--terra); margin-bottom: 0.15rem; }
+.rp-caption {
+  position: absolute; bottom: 0.75rem; right: 1rem;
+  font-family: var(--font-mono); font-size: 0.65rem; color: var(--muted);
+}
+
+/* Quick links */
+.ql-heading {
+  font-family: var(--font-mono); font-size: 0.72rem; color: var(--terra);
+  letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1.25rem;
+}
+.ql-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+.ql-card {
+  background: var(--cream); border: 1px solid var(--cream-dark);
+  border-radius: var(--radius); padding: 1.4rem;
+  display: flex; align-items: center; gap: 1rem;
+  transition: var(--transition); color: var(--ink);
+}
+.ql-card:hover { border-color: var(--terra-light); transform: translateY(-2px); box-shadow: var(--shadow); }
+.ql-icon { font-size: 1.2rem; color: var(--terra); flex-shrink: 0; }
+.ql-name { font-size: 0.9rem; font-weight: 500; color: var(--ink); margin-bottom: 0.15rem; }
+.ql-hint { font-family: var(--font-mono); font-size: 0.68rem; color: var(--muted); }
+
+@media (max-width: 800px) {
+  .resume-card { grid-template-columns: 1fr; gap: 2rem; padding: 2rem 1.5rem; }
+}

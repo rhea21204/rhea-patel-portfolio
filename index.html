@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rhea Patel — CS graduate, builder, and problem solver. Software development, AI tools, cybersecurity, data analysis." />
+  <title>Rhea Patel — CS Grad & Builder</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <!-- The "active" class is on the Home link because this is index.html -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">RP<span class="dot">.</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"      class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="home">
+    <!-- Background decorative text — not read by screen readers -->
+    <div class="hero-bg-word" aria-hidden="true">RHEA</div>
+
+    <div class="inner hero-inner">
+      <p class="hero-eyebrow">Hello, world. I'm</p>
+
+      <h1 class="hero-name">Rhea<br><em>Patel.</em></h1>
+
+      <p class="hero-sub">
+        CS graduate who builds things that actually work — software, AI tools, data systems,
+        and whatever the next interesting problem turns out to be.
+      </p>
+
+      <!-- Identity tags — edit these to match your current focus -->
+      <div class="hero-tags">
+        <span class="tag">Software Development</span>
+        <span class="tag">AI Tools</span>
+        <span class="tag">Cybersecurity</span>
+        <span class="tag">Data Analysis</span>
+        <span class="tag">Tech Consulting</span>
+        <span class="tag">Technical Communication</span>
+      </div>
+
+      <!-- Primary CTA buttons -->
+      <div class="hero-cta">
+        <a href="projects.html" class="btn btn-primary">View Projects</a>
+        <!--
+          TODO: Replace href="#" with your resume link
+          Once you add the PDF: href="assets/RheaPatel_Resume.pdf" target="_blank"
+        -->
+        <a href="#" class="btn btn-outline" target="_blank">Resume ↗</a>
+      </div>
+
+      <!-- Secondary links -->
+      <div class="hero-links">
+        <!-- TODO: Replace href="#" with your GitHub URL -->
+        <a href="#" class="hero-link" target="_blank">⌥ GitHub</a>
+        <!-- TODO: Replace href="#" with your LinkedIn URL -->
+        <a href="#" class="hero-link" target="_blank">↗ LinkedIn</a>
+        <a href="contact.html" class="hero-link">✉ Contact</a>
+      </div>
+    </div>
+
+    <p class="hero-scroll" aria-hidden="true">scroll ↓</p>
+  </section>
+
+  <!-- ===================== CURRENTLY ===================== -->
+  <!-- ✏️ Keep this section up to date — recruiters love seeing you're active -->
+  <section class="currently section">
+    <div class="inner">
+      <p class="section-label">Live status</p>
+      <div class="currently-grid">
+
+        <div class="currently-card" data-reveal>
+          <div class="currently-dot building"></div>
+          <div>
+            <p class="currently-label">Currently Building</p>
+            <!-- TODO: Update with your current project -->
+            <p class="currently-val">Temple Crawler app + sharpening Python skills</p>
+          </div>
+        </div>
+
+        <div class="currently-card" data-reveal>
+          <div class="currently-dot learning"></div>
+          <div>
+            <p class="currently-label">Currently Learning</p>
+            <!-- TODO: Update as you learn new things -->
+            <p class="currently-val">LLM integrations, Docker, deeper Python workflows</p>
+          </div>
+        </div>
+
+        <div class="currently-card" data-reveal>
+          <div class="currently-dot looking"></div>
+          <div>
+            <p class="currently-label">Currently Looking For</p>
+            <!-- TODO: Update based on your job search -->
+            <p class="currently-val">Entry-level roles in software, AI/data, or tech consulting</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== QUICK LOOK ===================== -->
+  <!-- Three cards linking to the most important pages -->
+  <section class="preview section">
+    <div class="inner">
+      <p class="section-label">Quick look</p>
+      <div class="preview-grid">
+
+        <a href="projects.html" class="preview-card" data-reveal>
+          <div class="preview-num">05 Projects</div>
+          <h3>Things I've Built</h3>
+          <p>From Python adventures to web apps solving real community problems.</p>
+          <span class="preview-arrow">→</span>
+        </a>
+
+        <a href="experience.html" class="preview-card" data-reveal>
+          <div class="preview-num">04 Experience</div>
+          <h3>Where I've Worked</h3>
+          <p>Working at the intersection of AI tools, business, and software development.</p>
+          <span class="preview-arrow">→</span>
+        </a>
+
+        <a href="about.html" class="preview-card dark" data-reveal>
+          <div class="preview-num">— About</div>
+          <h3>The Person</h3>
+          <p>How I think, what I build, and where I'm headed.</p>
+          <span class="preview-arrow">→</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="experience.html">Experience</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-copy">Rhea Patel · <span id="year"></span></p>
+      <p class="footer-sub">Built with curiosity and too many open tabs.</p>
+    </div>
+  </footer>
+
+  <!-- JS: main.js on every page, home.js only here -->
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

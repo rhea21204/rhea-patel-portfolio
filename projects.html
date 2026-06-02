@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Projects by Rhea Patel — Mystery Mansion, KeepPhillySafe, gMatch, Temple Crawler." />
+  <title>Projects — Rhea Patel</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/projects.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">RP<span class="dot">.</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-hero">
+    <div class="inner">
+      <p class="page-hero-eyebrow">03 — Projects</p>
+      <h1 class="page-hero-title">Things I've<br><em>actually built.</em></h1>
+      <p class="page-hero-sub">A mix of personal projects, coursework, hackathons, and "what if we tried this" ideas.</p>
+    </div>
+  </section>
+
+  <!-- FILTER BAR -->
+  <!-- The data-filter value must match the data-categories on the project cards -->
+  <div class="filter-bar-wrap">
+    <div class="inner">
+      <div class="filter-bar" role="group" aria-label="Filter projects by category">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="featured">Featured</button>
+        <button class="filter-btn" data-filter="python">Python</button>
+        <button class="filter-btn" data-filter="web-app">Web / App</button>
+        <button class="filter-btn" data-filter="group">Group Project</button>
+        <button class="filter-btn" data-filter="community">Community-Focused</button>
+        <button class="filter-btn" data-filter="wip">Work in Progress</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECTS GRID -->
+  <section class="projects-section section">
+    <div class="inner">
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- ============================================================
+             PROJECT 1: MYSTERY MANSION
+             data-categories: space-separated list of filter tags
+             ============================================================ -->
+        <article class="project-card" data-categories="featured python" data-reveal>
+
+          <!--
+            PROJECT IMAGE:
+            Right now this shows a placeholder box.
+            To add a real screenshot:
+            1. Add the image to the images/ folder (e.g. images/mystery-mansion.png)
+            2. Replace the entire <div class="project-img-placeholder"> with:
+               <img src="images/mystery-mansion.png" alt="Mystery Mansion screenshot" class="project-img" />
+          -->
+          <div class="project-img-placeholder">
+            <span>🏚</span>
+            <p>Screenshot coming soon</p>
+          </div>
+
+          <div class="project-body">
+            <div class="project-meta">
+              <div class="project-badges">
+                <span class="badge badge-done">Completed</span>
+                <span class="badge badge-featured">Featured</span>
+              </div>
+              <span class="project-cat">Python · First Project</span>
+            </div>
+
+            <h2 class="project-title">Mystery Mansion</h2>
+            <p class="project-tagline">"where my coding journey started"</p>
+
+            <p class="project-desc">
+              My first Python project — a text-based mystery adventure game where players explore rooms, make choices, and solve the mystery. This project represents where I started as a programmer and the foundation everything else built on.
+            </p>
+
+            <!-- Expandable section for more detail -->
+            <details class="project-more">
+              <summary>More Details</summary>
+              <div class="project-more-body">
+                <p class="more-heading">What this shows about me</p>
+                <p>I started from zero and built something complete. Curiosity and persistence are how I work — this project is the proof.</p>
+                <p class="more-heading">Technologies & Concepts</p>
+                <div class="tech-pills">
+                  <span>Python</span><span>Game Logic</span>
+                  <span>Conditionals</span><span>Functions</span><span>CLI Interaction</span>
+                </div>
+              </div>
+            </details>
+
+            <div class="project-actions">
+              <!--
+                TODO: Replace href="#" with your GitHub repo link
+                Example: href="https://github.com/rhea21204/mystery-mansion" target="_blank"
+              -->
+              <a href="#" class="btn btn-ghost" target="_blank">GitHub ↗</a>
+              <!-- Mystery Mansion is a CLI app — no live demo needed. Remove this line or add if you host it. -->
+            </div>
+          </div>
+        </article>
+
+        <!-- ============================================================
+             PROJECT 2: KEEP PHILLY SAFE
+             ============================================================ -->
+        <article class="project-card" data-categories="featured web-app community" data-reveal>
+
+          <div class="project-img-placeholder">
+            <span>🦺</span>
+            <p>Screenshot coming soon</p>
+          </div>
+
+          <div class="project-body">
+            <div class="project-meta">
+              <div class="project-badges">
+                <span class="badge badge-done">Completed</span>
+                <span class="badge badge-featured">Featured</span>
+              </div>
+              <span class="project-cat">Web App · Community · Hackathon</span>
+            </div>
+
+            <h2 class="project-title">KeepPhillySafe</h2>
+            <p class="project-tagline">"tech for safer, more informed communities"</p>
+
+            <p class="project-desc">
+              A community-focused web app that visualizes Philadelphia crime data to improve safety awareness for residents. Built at OWLHacks 2023 — awarded Best Beginner Hack. Uses interactive maps with a safety-score feature.
+            </p>
+
+            <details class="project-more">
+              <summary>More Details</summary>
+              <div class="project-more-body">
+                <p class="more-heading">What this shows about me</p>
+                <p>I build for real people, not just demos. This project shows technical skill paired with genuine community purpose.</p>
+                <p class="more-heading">Technologies & Concepts</p>
+                <div class="tech-pills">
+                  <span>Python</span><span>Streamlit</span><span>Leaflet</span>
+                  <span>Folium</span><span>Data Visualization</span><span>Rapid Prototyping</span>
+                </div>
+              </div>
+            </details>
+
+            <div class="project-actions">
+              <!-- TODO: Replace href="#" with GitHub repo and live demo links -->
+              <a href="#" class="btn btn-ghost"    target="_blank">GitHub ↗</a>
+              <a href="#" class="btn btn-outline"  target="_blank">Live Demo ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ============================================================
+             PROJECT 3: gMATCH
+             ============================================================ -->
+        <article class="project-card" data-categories="featured web-app group" data-reveal>
+
+          <div class="project-img-placeholder">
+            <span>🔗</span>
+            <p>Screenshot coming soon</p>
+          </div>
+
+          <div class="project-body">
+            <div class="project-meta">
+              <div class="project-badges">
+                <span class="badge badge-done">Completed</span>
+              </div>
+              <span class="project-cat">Web App · Group Project</span>
+            </div>
+
+            <h2 class="project-title">gMatch</h2>
+            <p class="project-tagline">"matching made smarter"</p>
+
+            <p class="project-desc">
+              A team-built web app that helps students form project groups based on availability, preferences, and survey responses. I improved the frontend UX: survey layout, form validation, dashboard navigation, and the availability grid. Built using real collaborative workflows — branches, PRs, Vercel preview deployments.
+            </p>
+
+            <details class="project-more">
+              <summary>More Details</summary>
+              <div class="project-more-body">
+                <p class="more-heading">What this shows about me</p>
+                <p>I work well in teams, contribute meaningfully to shared codebases, and navigate real-world collaborative dev workflows.</p>
+                <p class="more-heading">Technologies & Concepts</p>
+                <div class="tech-pills">
+                  <span>Next.js</span><span>React</span><span>JavaScript</span>
+                  <span>NextAuth</span><span>Vercel</span><span>GitHub</span>
+                </div>
+              </div>
+            </details>
+
+            <div class="project-actions">
+              <!-- TODO: Replace href="#" with GitHub repo and live demo links -->
+              <a href="#" class="btn btn-ghost"   target="_blank">GitHub ↗</a>
+              <a href="#" class="btn btn-outline" target="_blank">Live Demo ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ============================================================
+             PROJECT 4: TEMPLE CRAWLER (Work in Progress)
+             ============================================================ -->
+        <article class="project-card wip" data-categories="wip web-app" data-reveal>
+
+          <!-- Striped placeholder for WIP projects -->
+          <div class="project-img-placeholder wip-placeholder">
+            <span>🕸</span>
+            <p>In progress — screenshots coming</p>
+          </div>
+
+          <div class="project-body">
+            <div class="project-meta">
+              <div class="project-badges">
+                <span class="badge badge-wip">Work in Progress</span>
+              </div>
+              <span class="project-cat">App · In Development</span>
+            </div>
+
+            <h2 class="project-title">Temple Crawler</h2>
+            <p class="project-tagline">"currently crawling toward something useful"</p>
+
+            <p class="project-desc">
+              A software project I'm actively building and growing. Currently using this project to sharpen development skills, practice new tools, and build toward something genuinely useful. More details, screenshots, and a full repo link coming as development continues.
+            </p>
+
+            <!-- Progress bar to show WIP status visually -->
+            <div class="wip-progress">
+              <div class="wip-progress-row">
+                <span>Development progress</span>
+                <span>Actively building</span>
+              </div>
+              <div class="wip-bar">
+                <div class="wip-bar-fill"></div>
+              </div>
+            </div>
+
+            <details class="project-more">
+              <summary>Current Status</summary>
+              <div class="project-more-body">
+                <p class="more-heading">Status</p>
+                <p>Currently building and improving. Tech stack details, screenshots, and full GitHub link will be added as the project develops.</p>
+                <p class="more-heading">Tech Stack</p>
+                <div class="tech-pills">
+                  <span>TBD — updating as I build</span>
+                </div>
+              </div>
+            </details>
+
+            <div class="project-actions">
+              <!-- TODO: Add GitHub link when ready -->
+              <a href="#" class="btn btn-ghost" target="_blank">GitHub (coming soon)</a>
+            </div>
+          </div>
+        </article>
+
+        <!--
+          ================================================================
+          TO ADD A NEW PROJECT:
+          1. Copy an <article class="project-card"> block above
+          2. Paste it here
+          3. Update: title, tagline, description, data-categories, links
+          Available category tags: featured | python | web-app | group | community | wip
+          ================================================================
+        -->
+
+      </div><!-- /projects-grid -->
+
+      <!-- Shown when a filter returns zero results -->
+      <p class="no-results" id="noResults" style="display:none;">
+        No projects in this category yet — check back soon.
+      </p>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <nav class="footer-nav">
+        <a href="index.html">Home</a><a href="about.html">About</a>
+        <a href="projects.html">Projects</a><a href="experience.html">Experience</a>
+        <a href="resume.html">Resume</a><a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-copy">Rhea Patel · <span id="year"></span></p>
+      <p class="footer-sub">Built with curiosity and too many open tabs.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/projects.js"></script>
+</body>
+</html>

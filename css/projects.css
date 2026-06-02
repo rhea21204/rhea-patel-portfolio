@@ -1,0 +1,116 @@
+/* css/projects.css */
+
+/* ---- FILTER BAR ---- */
+.filter-bar-wrap {
+  background: var(--cream);
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--cream-dark);
+  position: sticky;
+  top: 64px; /* matches nav height */
+  z-index: 50;
+}
+.filter-bar { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.filter-btn {
+  font-family: var(--font-body); font-size: 0.78rem; font-weight: 500;
+  padding: 0.35rem 1rem; border-radius: 100px;
+  background: transparent; border: 1.5px solid var(--cream-dark);
+  color: var(--muted); cursor: pointer; transition: var(--transition);
+}
+.filter-btn:hover  { border-color: var(--terra-light); color: var(--terra); }
+.filter-btn.active { background: var(--terra); border-color: var(--terra); color: var(--cream-light); }
+
+/* ---- PROJECTS GRID ---- */
+.projects-section { background: var(--cream-light); }
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(460px, 1fr));
+  gap: 2rem;
+}
+
+/* ---- PROJECT CARD ---- */
+.project-card {
+  background: var(--cream);
+  border: 1px solid var(--cream-dark);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex; flex-direction: column;
+  transition: var(--transition);
+}
+.project-card:hover {
+  border-color: var(--terra-light);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+.project-card.wip { border-style: dashed; }
+
+/* Image area */
+.project-img { width: 100%; height: 210px; object-fit: cover; }
+.project-img-placeholder {
+  width: 100%; height: 210px;
+  background: var(--cream-dark);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 0.5rem;
+}
+.project-img-placeholder span { font-size: 2.5rem; }
+.project-img-placeholder p { font-family: var(--font-mono); font-size: 0.7rem; color: var(--muted); }
+.wip-placeholder {
+  background: repeating-linear-gradient(
+    -45deg, var(--cream-dark), var(--cream-dark) 10px, var(--cream) 10px, var(--cream) 20px
+  );
+}
+
+/* Card body */
+.project-body { padding: 2rem; display: flex; flex-direction: column; gap: 0.85rem; flex: 1; }
+.project-meta { display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem; justify-content: space-between; }
+.project-badges { display: flex; gap: 0.4rem; }
+.project-cat { font-family: var(--font-mono); font-size: 0.68rem; color: var(--muted); letter-spacing: 0.06em; }
+
+.project-title    { font-family: var(--font-display); font-size: 1.55rem; font-weight: 900; color: var(--ink); }
+.project-tagline  { font-size: 0.83rem; color: var(--terra); font-style: italic; }
+.project-desc     { font-size: 0.92rem; color: var(--ink-soft); line-height: 1.75; }
+
+/* Expandable "More Details" */
+.project-more { border-top: 1px solid var(--cream-dark); padding-top: 1rem; }
+.project-more summary {
+  font-family: var(--font-mono); font-size: 0.75rem; color: var(--terra);
+  cursor: pointer; letter-spacing: 0.06em; list-style: none;
+  display: flex; align-items: center; gap: 0.4rem; user-select: none;
+}
+.project-more summary::before { content: '+ '; }
+.project-more[open] summary::before { content: '− '; }
+.project-more-body { margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem; }
+.more-heading { font-family: var(--font-mono); font-size: 0.68rem; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; }
+.project-more-body p:not(.more-heading) { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.7; }
+
+.tech-pills { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.tech-pills span {
+  font-size: 0.72rem; font-family: var(--font-mono);
+  padding: 0.2rem 0.7rem;
+  background: var(--cream-light); border: 1px solid var(--cream-dark);
+  border-radius: 4px; color: var(--muted);
+}
+
+/* WIP progress bar */
+.wip-progress { margin: 0.25rem 0; }
+.wip-progress-row {
+  display: flex; justify-content: space-between;
+  font-family: var(--font-mono); font-size: 0.67rem; color: var(--muted); margin-bottom: 0.4rem;
+}
+.wip-bar { height: 4px; background: var(--cream-dark); border-radius: 100px; overflow: hidden; }
+.wip-bar-fill {
+  height: 100%; width: 40%;
+  background: var(--gold); border-radius: 100px;
+  animation: wipPulse 2.5s ease-in-out infinite;
+}
+@keyframes wipPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.45; } }
+
+/* Action buttons */
+.project-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: auto; padding-top: 0.75rem; }
+
+/* No results message */
+.no-results { text-align: center; padding: 4rem 2rem; color: var(--muted); font-style: italic; }
+
+@media (max-width: 700px) {
+  .projects-grid { grid-template-columns: 1fr; }
+  .filter-bar-wrap { top: 56px; }
+}
