@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="About Rhea Patel — CS graduate, builder, and creative problem-solver." />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="About Rhea Patel — CS graduate and builder."/>
   <title>About — Rhea Patel</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/global.css" />
-  <link rel="stylesheet" href="css/about.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=Playfair+Display:ital,wght@1,400;1,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/global.css"/>
+  <link rel="stylesheet" href="css/about.css"/>
 </head>
 <body class="page-top">
 
-  <!-- NAV -->
   <nav class="nav" id="nav">
     <a href="index.html" class="nav-logo">Rhea Patel</a>
     <div class="nav-right">
@@ -23,13 +22,13 @@
         <li><a href="experience.html" data-page="experience.html">Work</a></li>
         <li><a href="#" class="nav-resume" target="_blank" rel="noopener">Resume ↗</a></li>
       </ul>
+      <button class="theme-toggle" aria-label="Switch to dark mode">🌙</button>
       <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <!-- MENU OVERLAY -->
   <div class="menu-overlay" id="menuOverlay">
     <nav class="menu-links">
       <a href="index.html"      class="menu-link-item"><span class="menu-num">01</span><span class="menu-label">Home</span></a>
@@ -39,194 +38,136 @@
       <a href="values.html"     class="menu-link-item"><span class="menu-num">05</span><span class="menu-label">Values</span></a>
     </nav>
     <div class="menu-info">
-      <div class="menu-info-group">
-        <p class="menu-info-label">Location</p>
-        <p class="menu-info-val">Philadelphia, PA<br>/ New Jersey area</p>
-      </div>
-      <div class="menu-info-group">
-        <p class="menu-info-label">Email</p>
-        <div class="menu-info-val">
-          <a href="mailto:your@email.com">your@email.com</a>
-        </div>
-      </div>
-      <div class="menu-info-group">
-        <p class="menu-info-label">Social</p>
-        <div class="menu-info-val">
-          <a href="#" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="#" target="_blank" rel="noopener">GitHub</a>
-        </div>
-      </div>
-      <div class="menu-info-group">
-        <p class="menu-info-label">Resume</p>
-        <div class="menu-info-val">
-          <a href="#" target="_blank" rel="noopener">Download PDF</a>
-        </div>
-      </div>
+      <div><p class="menu-info-label">Location</p><p class="menu-info-val">Philadelphia, PA / New Jersey area</p></div>
+      <div><p class="menu-info-label">Email</p><div class="menu-info-val"><a href="mailto:your@email.com">your@email.com</a></div></div>
+      <div><p class="menu-info-label">Social</p><div class="menu-info-val"><a href="#" target="_blank">LinkedIn</a><a href="#" target="_blank">GitHub</a></div></div>
+      <div><p class="menu-info-label">Resume</p><div class="menu-info-val"><a href="#" target="_blank">Download PDF ↗</a></div></div>
     </div>
   </div>
 
-  <!-- PAGE CONTENT -->
-  <main class="about-page">
-
-    <!-- Giant heading -->
+  <main>
+    <!-- Page heading -->
     <div class="about-header">
-      <h1 class="page-heading">About</h1>
+      <h1 class="page-heading">About <span class="sparkle">✦</span></h1>
     </div>
 
-    <!-- MY STORY section — 2-column like the reference -->
-    <section class="about-story">
-      <div class="about-story-left">
-        <p class="label">My Story</p>
+    <!-- 2-column story layout -->
+    <div class="about-grid">
 
+      <!-- LEFT: photo + label -->
+      <div class="about-left">
+        <p class="label" style="margin-bottom:20px;">My Story</p>
         <!--
-          ✏️ IMAGE: Replace the placeholder div below with:
-          <img src="assets/images/rhea-about.jpg" alt="Rhea Patel" class="about-photo" />
-          Multiple photos can be stacked with a slight rotation for the polaroid look.
+          ✏️ PHOTO: Replace placeholder with:
+          <img src="assets/images/rhea-about.jpg" alt="Rhea Patel" class="about-photo"/>
         -->
         <div class="about-photo-placeholder">
-          <div class="about-photo-card">📸</div>
+          <span>🌸</span>
+          <p class="photo-caption-text">photo coming soon</p>
         </div>
       </div>
 
-      <div class="about-story-right" data-reveal>
+      <!-- RIGHT: story text -->
+      <div class="about-right" data-reveal>
         <p class="about-intro">
-          hi! i'm rhea — a computer science graduate who likes building useful
-          projects and learning how technology can solve practical problems.
+          hi! i'm rhea — a Computer Science graduate who loves <span class="accent">building</span>
+          useful things and learning how technology can solve practical problems.
         </p>
-
         <p>
-          i'm interested in software development, AI tools, data analysis,
-          cybersecurity, and tech consulting — but i also care deeply about
-          communication. making technical ideas easier to understand for the
-          people who need them most is one of my favorite challenges.
+          i'm especially interested in software development, AI tools, data analysis,
+          cybersecurity, and tech consulting — but i also care a lot about communication
+          and creativity. i love making technical ideas easier to understand for the people
+          who need them most. building good communication is just as important as good code.
         </p>
-
         <p>
-          currently, i'm building <strong>Temple Crawler</strong>, an app i'm
-          actively developing and improving. i'm also going deeper into AI tools,
-          app development, debugging, and deployment — learning by building, which
-          is the only way i know how.
+          i work at the intersection of technology, AI, business workflows, content strategy,
+          and technical communication. i'm someone who can write code AND explain it clearly —
+          and i think that combination is rare and valuable.
         </p>
-
         <p>
-          i'm actively looking for entry-level roles in software engineering,
-          AI/data, cybersecurity, or tech consulting. i want to be somewhere that
-          values curiosity, clear thinking, and building things that actually work
-          for people.
+          "i believe in learning by doing, asking questions, and making sure what i build actually helps someone." 🩷
         </p>
 
-        <div class="about-links" data-reveal>
-          <a href="projects.html" class="btn-pill">view my projects →</a>
-          <a href="experience.html" class="btn-pill btn-pill-outline">see my work →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Education timeline -->
-    <section class="about-education">
-      <div class="about-edu-header" data-reveal>
-        <p class="label">Education</p>
-      </div>
-
-      <div class="about-edu-row" data-reveal>
-        <div class="edu-meta">
+        <!-- Education block -->
+        <div class="about-edu" data-reveal>
+          <p class="label-rose" style="margin-bottom:14px;">Education</p>
           <p class="edu-school">Temple University</p>
           <p class="edu-degree">B.S. Computer Science</p>
-          <p class="edu-detail">Philadelphia, PA · 2022 – 2026</p>
-        </div>
-        <div class="edu-courses">
-          <p class="label" style="margin-bottom:12px;">Relevant coursework</p>
-          <div class="course-tags">
-            <span>Data Structures & Algorithms</span>
-            <span>Software Development</span>
-            <span>Operating Systems</span>
-            <span>Cybersecurity</span>
-            <span>Software Security</span>
-            <span>Digital Forensics</span>
-            <span>Web Development</span>
-            <span>UX Design</span>
-            <span>Probability & Statistics</span>
-            <span>Project-Based Programming</span>
+          <p class="edu-dates">Philadelphia, PA · 2022 – 2026</p>
+
+          <div class="about-courses">
+            <p class="label" style="margin:14px 0 8px;">Relevant Coursework</p>
+            <div class="course-chips">
+              <span>Data Structures & Algorithms</span>
+              <span>Software Development</span>
+              <span>Operating Systems</span>
+              <span>Cybersecurity / Software Security</span>
+              <span>Digital Forensics</span>
+              <span>Web Development</span>
+              <span>UX Design</span>
+              <span>Probability & Statistics</span>
+              <span>Project-Based Programming</span>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Story / timeline entries -->
-    <section class="about-timeline">
-      <div class="timeline-header" data-reveal>
-        <p class="label">Timeline</p>
-      </div>
-
-      <div class="timeline-entry" data-reveal>
-        <p class="timeline-year">2026</p>
-        <div class="timeline-content">
-          <p class="timeline-title">Software Engineering & AI Solutions Intern</p>
-          <p>joined TPNI / Building Agents — working at the intersection of AI
-          tools, software development, and technical communication.</p>
-          <ul>
-            <li>contributing to development, debugging, and enhancement of AI-powered business applications</li>
-            <li>translating technical product ideas into clear, business-friendly messaging</li>
-            <li>started moving into hands-on coding work: apps, debugging, features, building my own project</li>
-          </ul>
+        <!-- Currently -->
+        <div class="about-currently" data-reveal>
+          <p class="label-rose" style="margin-bottom:14px;">Currently</p>
+          <div class="currently-row">
+            <span class="c-bullet">🩷</span>
+            <div><p class="c-key">building</p><p class="c-val">Temple Crawler — my current app project</p></div>
+          </div>
+          <div class="currently-row">
+            <span class="c-bullet">✦</span>
+            <div><p class="c-key">learning</p><p class="c-val">AI tools, app development, debugging, and deployment</p></div>
+          </div>
+          <div class="currently-row">
+            <span class="c-bullet">🔍</span>
+            <div><p class="c-key">goal</p><p class="c-val">to keep building impactful projects, and working on a team where i can learn + create real value</p></div>
+          </div>
         </div>
-      </div>
 
-      <div class="timeline-entry" data-reveal>
-        <p class="timeline-year">2023</p>
-        <div class="timeline-content">
-          <p class="timeline-title">OWLHacks Hackathon — Best Beginner Hack 🏆</p>
-          <p>built KeepPhillySafe with a team in under 24 hours. designed,
-          coded, and pitched to judges. awarded best beginner hack.</p>
+        <!-- Skills I use -->
+        <div class="about-skills" data-reveal>
+          <p class="label-rose" style="margin-bottom:14px;">Skills I Use</p>
+          <div class="skills-chips">
+            <span class="tag tag-rose">AI Tools</span>
+            <span class="tag">Content Strategy</span>
+            <span class="tag">Technical Writing</span>
+            <span class="tag">Workflow Automation</span>
+            <span class="tag tag-rose">App Development</span>
+            <span class="tag">Debugging</span>
+            <span class="tag">Communication</span>
+            <span class="tag">Business Thinking</span>
+          </div>
         </div>
-      </div>
 
-      <div class="timeline-entry" data-reveal>
-        <p class="timeline-year">2022</p>
-        <div class="timeline-content">
-          <p class="timeline-title">Started at Temple University</p>
-          <p>began B.S. Computer Science. first Python project: Mystery Mansion.
-          realized i love the process of turning a problem into something
-          that actually works.</p>
-        </div>
-      </div>
-    </section>
-
+      </div><!-- /about-right -->
+    </div><!-- /about-grid -->
   </main>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-top">
-      <div>
-        <p class="footer-tagline">Building where tech meets real people</p>
-        <a href="mailto:your@email.com" class="footer-email">your@email.com</a>
-      </div>
-      <div class="footer-col">
-        <p class="footer-col-label">Social</p>
-        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="#" target="_blank" rel="noopener">GitHub</a>
-      </div>
-      <div class="footer-col">
-        <p class="footer-col-label">Sections</p>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="experience.html">Work</a>
-        <a href="values.html">Values</a>
-      </div>
-      <div class="footer-col">
-        <p class="footer-col-label">Resume</p>
-        <a href="#" target="_blank" rel="noopener">Download PDF</a>
-      </div>
+      <div><p class="footer-tagline">A Swiss Army Knife in Tech + Business</p>
+        <a href="mailto:your@email.com" class="footer-email">your@email.com</a></div>
+      <div class="footer-col"><p class="footer-col-label">Social</p>
+        <a href="#" target="_blank">LinkedIn</a><a href="#" target="_blank">GitHub</a></div>
+      <div class="footer-col"><p class="footer-col-label">Sections</p>
+        <a href="about.html">About</a><a href="projects.html">Projects</a>
+        <a href="experience.html">Work</a><a href="values.html">Values</a></div>
+      <div class="footer-col"><p class="footer-col-label">Resume</p>
+        <a href="#" target="_blank">Download PDF ↗</a></div>
     </div>
     <div class="footer-marquee" aria-hidden="true">
       <div class="footer-marquee-inner">
-        <span>Rhea Patel ✦</span><span>Rhea Patel ✦</span><span>Rhea Patel ✦</span>
-        <span>Rhea Patel ✦</span><span>Rhea Patel ✦</span><span>Rhea Patel ✦</span>
-        <span>Rhea Patel ✦</span><span>Rhea Patel ✦</span>
+        <span>IT'S RHEA PATEL ✦</span><span>IT'S RHEA PATEL ✦</span>
+        <span>IT'S RHEA PATEL ✦</span><span>IT'S RHEA PATEL ✦</span>
+        <span>IT'S RHEA PATEL ✦</span><span>IT'S RHEA PATEL ✦</span>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© <span id="year"></span> Rhea Patel.</p>
+      <p>© <span class="js-year"></span> Rhea Patel.</p>
       <p>built with curiosity + too many open tabs</p>
       <p>currently in: Philadelphia / New Jersey area</p>
     </div>

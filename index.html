@@ -1,49 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Rhea Patel — CS graduate, builder, and creative problem-solver." />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Rhea Patel — CS graduate building at the intersection of software, AI tools, and business."/>
   <title>Rhea Patel</title>
-
-  <!-- ✏️ FONTS: Replace this link to swap fonts globally -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="css/global.css" />
-  <link rel="stylesheet" href="css/home.css" />
+  <!-- ✏️ FONTS: Replace link below to swap fonts globally -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=Playfair+Display:ital,wght@1,400;1,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/global.css"/>
+  <link rel="stylesheet" href="css/home.css"/>
 </head>
 <body class="page-top">
 
-  <!-- ============================================================
-    NAVIGATION
-    ✏️ NAV: Update the resume link below with your actual PDF path
-    ============================================================ -->
+  <!-- ── NAV ── -->
   <nav class="nav" id="nav">
-    <a href="index.html" class="nav-logo" aria-label="Rhea Patel — Home">Rhea Patel</a>
-
+    <a href="index.html" class="nav-logo">Rhea Patel</a>
     <div class="nav-right">
       <ul class="nav-links">
         <li><a href="about.html"      data-page="about.html">About</a></li>
         <li><a href="projects.html"   data-page="projects.html">Projects</a></li>
         <li><a href="experience.html" data-page="experience.html">Work</a></li>
-        <!-- ✏️ RESUME: Replace # with your resume PDF path, e.g. assets/resume/RheaPatel_Resume.pdf -->
+        <!-- ✏️ RESUME: Replace # with your PDF path -->
         <li><a href="#" class="nav-resume" target="_blank" rel="noopener">Resume ↗</a></li>
       </ul>
-
-      <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <button class="theme-toggle" aria-label="Switch to dark mode">🌙</button>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <!-- ============================================================
-    HAMBURGER MENU OVERLAY
-    ✏️ MENU: Update email, LinkedIn, GitHub, and resume links below
-    ============================================================ -->
-  <div class="menu-overlay" id="menuOverlay" role="dialog" aria-label="Navigation menu">
-    <nav class="menu-links" aria-label="Main navigation">
+  <!-- ── HAMBURGER OVERLAY ── -->
+  <div class="menu-overlay" id="menuOverlay">
+    <nav class="menu-links">
       <a href="index.html"      class="menu-link-item"><span class="menu-num">01</span><span class="menu-label">Home</span></a>
       <a href="about.html"      class="menu-link-item"><span class="menu-num">02</span><span class="menu-label">About</span></a>
       <a href="projects.html"   class="menu-link-item"><span class="menu-num">03</span><span class="menu-label">Projects</span></a>
@@ -51,154 +42,176 @@
       <a href="values.html"     class="menu-link-item"><span class="menu-num">05</span><span class="menu-label">Values</span></a>
     </nav>
     <div class="menu-info">
-      <div class="menu-info-group">
-        <p class="menu-info-label">Location</p>
-        <!-- ✏️ LOCATION: Update as needed -->
-        <p class="menu-info-val">Philadelphia, PA<br>/ New Jersey area</p>
-      </div>
-      <div class="menu-info-group">
-        <p class="menu-info-label">Email</p>
+      <div><p class="menu-info-label">Location</p>
+        <p class="menu-info-val">Philadelphia, PA / New Jersey area</p></div>
+      <div><p class="menu-info-label">Email</p>
+        <!-- ✏️ EMAIL -->
+        <div class="menu-info-val"><a href="mailto:your@email.com">your@email.com</a></div></div>
+      <div><p class="menu-info-label">Social</p>
         <div class="menu-info-val">
-          <!-- ✏️ EMAIL: Replace with your email -->
-          <a href="mailto:your@email.com">your@email.com</a>
-        </div>
-      </div>
-      <div class="menu-info-group">
-        <p class="menu-info-label">Social</p>
-        <div class="menu-info-val">
-          <!-- ✏️ SOCIAL: Replace # with your LinkedIn and GitHub URLs -->
           <a href="#" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="#" target="_blank" rel="noopener">GitHub</a>
-        </div>
-      </div>
-      <div class="menu-info-group">
-        <p class="menu-info-label">Resume</p>
-        <div class="menu-info-val">
-          <!-- ✏️ RESUME: Replace # with your PDF path -->
-          <a href="#" target="_blank" rel="noopener">Download PDF</a>
-        </div>
-      </div>
+          <a href="#" target="_blank" rel="noopener">GitHub</a></div></div>
+      <div><p class="menu-info-label">Resume</p>
+        <div class="menu-info-val"><a href="#" target="_blank" rel="noopener">Download PDF ↗</a></div></div>
     </div>
   </div>
 
-  <!-- ============================================================
-    HERO
-    ============================================================ -->
+  <!-- ════════════════════════════════════════════
+       HOMEPAGE
+  ════════════════════════════════════════════════ -->
   <main>
+
+    <!-- ── HERO ────────────────────────────────── -->
     <section class="hero">
 
-      <!-- Left fixed column: name + social -->
+      <!-- LEFT: intro + CTA -->
       <div class="hero-left">
-        <div class="hero-greeting">
-          <p class="hero-hello">hello, world —</p>
-          <h1 class="hero-name">i'm Rhea<br>Patel.</h1>
-        </div>
 
-        <div class="hero-social-col">
-          <!-- ✏️ SOCIAL: Replace # with your URLs -->
-          <a href="#" target="_blank" rel="noopener" class="hero-social-link">Instagram</a>
-          <a href="#" target="_blank" rel="noopener" class="hero-social-link">LinkedIn</a>
-          <a href="#" target="_blank" rel="noopener" class="hero-social-link">GitHub</a>
-        </div>
+        <p class="hero-hello">Hello, <span class="accent">world</span> —</p>
+        <h1 class="hero-name">I'm Rhea Patel.</h1>
 
-        <!-- Scrolling role labels — appear below social -->
-        <div class="hero-role-list">
-          <div class="hero-role-item">software development</div>
-          <div class="hero-role-item">AI tools</div>
-          <div class="hero-role-item">data analysis</div>
-          <div class="hero-role-item">cybersecurity</div>
-          <div class="hero-role-item">tech consulting</div>
-          <div class="hero-role-item">technical communication</div>
-        </div>
-      </div>
+        <p class="hero-bio">
+          I'm a Computer Science graduate building at the intersection of software,
+          AI tools, data, cybersecurity, and business workflows. I like turning messy
+          ideas into <span class="accent">useful</span>, understandable products.
+        </p>
 
-      <!-- Center column: numbered callouts + photo area -->
-      <div class="hero-center">
-        <p class="hero-ima">i'm a cs grad who builds things.</p>
-
-        <div class="hero-callouts">
-          <div class="hero-callout">
-            <span class="callout-num">[01]</span>
-            <div class="callout-body">
-              <strong>software development</strong>
-              <p>building apps, tools, and user-focused projects</p>
-            </div>
-          </div>
-          <div class="hero-callout">
-            <span class="callout-num">[02]</span>
-            <div class="callout-body">
-              <strong>AI tools + automation</strong>
-              <p>exploring workflows, agents, and practical AI use cases</p>
-            </div>
-          </div>
-          <div class="hero-callout">
-            <span class="callout-num">[03]</span>
-            <div class="callout-body">
-              <strong>data + cybersecurity</strong>
-              <p>interested in analysis, security basics, and digital systems</p>
-            </div>
-          </div>
-          <div class="hero-callout">
-            <span class="callout-num">[04]</span>
-            <div class="callout-body">
-              <strong>tech/business communication</strong>
-              <p>translating technical ideas into language people understand</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Photo / image placeholder -->
-        <!--
-          ✏️ IMAGE: Replace the placeholder div below with:
-          <img src="assets/images/rhea-photo.jpg" alt="Rhea Patel" class="hero-photo" />
-        -->
-        <div class="hero-photo-placeholder">
-          <span>📸 photo coming soon</span>
-        </div>
-      </div>
-
-      <!-- Right column: status + CTA -->
-      <div class="hero-right">
         <p class="hero-available">
-          <span class="available-dot"></span>
-          available for entry-level tech roles :)
+          <span class="available-dot"></span> available for entry-level tech roles :)
         </p>
 
-        <a href="projects.html" class="btn-pill">view projects →</a>
+        <!-- CTA buttons row -->
+        <div class="hero-btns">
+          <a href="projects.html" class="btn btn-solid">View Projects →</a>
+          <!-- ✏️ RESUME -->
+          <a href="#" class="btn btn-outline" target="_blank" rel="noopener">Resume ↗</a>
+          <!-- ✏️ GITHUB -->
+          <a href="#" class="btn btn-outline" target="_blank" rel="noopener">GitHub ↗</a>
+          <!-- ✏️ LINKEDIN -->
+          <a href="#" class="btn btn-outline" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
 
-        <p class="hero-location">☆ based in the Philadelphia<br>/ New Jersey area</p>
+        <!-- Social icon row -->
+        <div class="hero-social">
+          <!-- ✏️ SOCIAL ICONS: Replace # with your URLs -->
+          <a href="#" class="hero-social-icon" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="hero-social-icon" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+          <a href="mailto:your@email.com" class="hero-social-icon" aria-label="Email">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+
+        <!-- Role callouts -->
+        <div class="hero-callouts">
+          <div class="callout-item" data-reveal>
+            <span class="callout-num">01</span>
+            <div>
+              <p class="callout-icon">&lt;/&gt;</p>
+              <p class="callout-title">software development</p>
+              <p class="callout-desc">building apps, tools,<br>and user-focused projects</p>
+            </div>
+          </div>
+          <div class="callout-item" data-reveal>
+            <span class="callout-num">02</span>
+            <div>
+              <p class="callout-icon">✦</p>
+              <p class="callout-title">AI tools + automation</p>
+              <p class="callout-desc">exploring workflows, agents, and practical AI use cases</p>
+            </div>
+          </div>
+          <div class="callout-item" data-reveal>
+            <span class="callout-num">03</span>
+            <div>
+              <p class="callout-icon">🔒</p>
+              <p class="callout-title">data + cybersecurity</p>
+              <p class="callout-desc">interested in analysis, security basics, and digital systems</p>
+            </div>
+          </div>
+          <div class="callout-item" data-reveal>
+            <span class="callout-num">04</span>
+            <div>
+              <p class="callout-icon">💬</p>
+              <p class="callout-title">tech/business communication</p>
+              <p class="callout-desc">translating technical ideas into language people understand</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /hero-left -->
+
+      <!-- CENTER: photo -->
+      <div class="hero-center">
+        <!--
+          ✏️ PHOTO: Replace the placeholder below with:
+          <img src="assets/images/rhea-hero.jpg" alt="Rhea Patel" class="hero-photo" />
+        -->
+        <div class="hero-photo-wrap">
+          <div class="hero-photo-placeholder">
+            <div class="photo-inner">
+              <span class="photo-emoji">🌸</span>
+              <p class="photo-label">focus<br>create<br>impact</p>
+            </div>
+          </div>
+          <div class="hero-photo-sparkle">✦</div>
+        </div>
+      </div>
+
+      <!-- RIGHT: currently + location -->
+      <div class="hero-right">
+        <div class="currently-box">
+          <p class="currently-header">currently</p>
+
+          <div class="currently-item">
+            <span class="currently-icon building">🩷</span>
+            <div>
+              <p class="currently-label">building</p>
+              <p class="currently-val">Temple Crawler</p>
+              <!-- ✏️ CURRENTLY: Update as your project evolves -->
+              <p class="currently-sub">my current project — more features, screenshots, and updates coming soon!</p>
+            </div>
+          </div>
+
+          <div class="currently-item">
+            <span class="currently-icon">✦</span>
+            <div>
+              <p class="currently-label">learning</p>
+              <!-- ✏️ CURRENTLY LEARNING: Update regularly -->
+              <p class="currently-val">AI tools, app development, debugging, deployment, and product thinking</p>
+            </div>
+          </div>
+
+          <div class="currently-item">
+            <span class="currently-icon">🔍</span>
+            <div>
+              <p class="currently-label">looking for</p>
+              <!-- ✏️ JOB SEARCH: Update as needed -->
+              <p class="currently-val">entry-level opportunities in software, AI, data, cybersecurity, or tech consulting</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="hero-location">☆ based in the Philadelphia /<br>New Jersey area</p>
+        <p class="hero-tagline">built with curiosity<br>+ too many open tabs 🩷</p>
       </div>
 
     </section>
 
-    <!-- Short about teaser below fold -->
-    <section class="home-bio">
-      <div class="home-bio-inner">
-        <p class="home-bio-text" data-reveal>
-          i think deeply about where technology, people, and communication
-          meet — and how building useful software can make those intersections
-          better. i believe in learning by doing, starting before i'm ready,
-          and making sure what i build actually helps someone.
-        </p>
-        <a href="about.html" class="btn-pill btn-pill-outline" data-reveal>read more about me →</a>
-      </div>
-    </section>
   </main>
 
-  <!-- ============================================================
-    FOOTER — shared on all pages. Copy this block to each page.
-    ✏️ FOOTER: Update email, social links, resume link below
-    ============================================================ -->
+  <!-- ── FOOTER ── -->
   <footer class="footer">
     <div class="footer-top">
       <div>
-        <p class="footer-tagline">Building where tech meets real people</p>
-        <!-- ✏️ EMAIL: Replace with your email -->
+        <p class="footer-tagline">A Swiss Army Knife in Tech + Business</p>
+        <!-- ✏️ EMAIL -->
         <a href="mailto:your@email.com" class="footer-email">your@email.com</a>
       </div>
       <div class="footer-col">
         <p class="footer-col-label">Social</p>
-        <!-- ✏️ SOCIAL: Replace # with actual URLs -->
         <a href="#" target="_blank" rel="noopener">LinkedIn</a>
         <a href="#" target="_blank" rel="noopener">GitHub</a>
       </div>
@@ -211,29 +224,19 @@
       </div>
       <div class="footer-col">
         <p class="footer-col-label">Resume</p>
-        <!-- ✏️ RESUME: Replace # with PDF path -->
-        <a href="#" target="_blank" rel="noopener">Download PDF</a>
+        <a href="#" target="_blank" rel="noopener">Download PDF ↗</a>
       </div>
     </div>
-
-    <!-- Scrolling marquee -->
     <div class="footer-marquee" aria-hidden="true">
       <div class="footer-marquee-inner">
-        <span>Rhea Patel ✦</span>
-        <span>Rhea Patel ✦</span>
-        <span>Rhea Patel ✦</span>
-        <span>Rhea Patel ✦</span>
-        <span>Rhea Patel ✦</span>
-        <span>Rhea Patel ✦</span>
-        <span>Rhea Patel ✦</span>
-        <span>Rhea Patel ✦</span>
+        <span>IT'S RHEA PATEL ✦</span><span>IT'S RHEA PATEL ✦</span>
+        <span>IT'S RHEA PATEL ✦</span><span>IT'S RHEA PATEL ✦</span>
+        <span>IT'S RHEA PATEL ✦</span><span>IT'S RHEA PATEL ✦</span>
       </div>
     </div>
-
     <div class="footer-bottom">
-      <p>© <span id="year"></span> Rhea Patel.</p>
+      <p>© <span class="js-year"></span> Rhea Patel.</p>
       <p>built with curiosity + too many open tabs</p>
-      <!-- ✏️ LOCATION: Update as needed -->
       <p>currently in: Philadelphia / New Jersey area</p>
     </div>
   </footer>

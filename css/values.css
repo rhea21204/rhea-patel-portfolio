@@ -1,52 +1,56 @@
 /* css/values.css */
 
 .values-header {
-  padding: 60px 40px 40px;
+  padding: 52px 40px 32px;
   border-bottom: 1px solid var(--ink-ghost);
 }
+.sparkle { color: var(--rose); font-size: 0.45em; vertical-align: super; }
 
-/* ── VALUES LIST — numbered, clean, typographic ───────────── */
 .values-list {
   padding: 0 40px 60px;
 }
 
 .value-item {
   display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 0 40px;
-  padding: 36px 0;
+  grid-template-columns: 64px 1fr;
+  gap: 0 28px;
+  padding: 32px 0;
   border-bottom: 1px solid var(--ink-ghost);
+  align-items: baseline;
 }
 .value-item:first-child { border-top: 1px solid var(--ink-ghost); }
 
 .value-num {
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   color: var(--ink-ghost);
-  letter-spacing: 0.08em;
-  padding-top: 5px;
+  letter-spacing: 0.06em;
+  padding-top: 4px;
 }
 
 .value-title {
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-size: clamp(1.05rem, 2.5vw, 1.4rem);
   font-weight: 700;
   letter-spacing: -0.01em;
   color: var(--ink);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   line-height: 1.2;
 }
+.value-title .accent { color: var(--rose); font-size: 1.05em; }
 
 .value-desc {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--ink-mid);
-  line-height: 1.78;
-  max-width: 600px;
+  line-height: 1.75;
+  max-width: 560px;
 }
 
-/* ── RESPONSIVE ──────────────────────────────────────────── */
+/* Hover: subtle blush tint on row */
+.value-item:hover { background: var(--blush-bg); }
+.value-item:hover .value-num { color: var(--rose); }
+
 @media (max-width: 860px) {
-  .values-header { padding: 40px 20px 32px; }
-  .values-list   { padding: 0 20px 52px; }
-  .value-item    { grid-template-columns: 52px 1fr; gap: 0 20px; }
-  .value-title   { font-size: 1.1rem; }
+  .values-header { padding: 36px 20px 24px; }
+  .values-list   { padding: 0 20px 48px; }
+  .value-item    { grid-template-columns: 44px 1fr; gap: 0 16px; }
 }

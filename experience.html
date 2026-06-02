@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Work experience — Rhea Patel." />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Work experience — Rhea Patel."/>
   <title>Work — Rhea Patel</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/global.css" />
-  <link rel="stylesheet" href="css/experience.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=Playfair+Display:ital,wght@1,400;1,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/global.css"/>
+  <link rel="stylesheet" href="css/experience.css"/>
 </head>
 <body class="page-top">
 
-  <!-- NAV -->
   <nav class="nav" id="nav">
     <a href="index.html" class="nav-logo">Rhea Patel</a>
     <div class="nav-right">
@@ -23,13 +22,13 @@
         <li><a href="experience.html" data-page="experience.html" class="active">Work</a></li>
         <li><a href="#" class="nav-resume" target="_blank" rel="noopener">Resume ↗</a></li>
       </ul>
+      <button class="theme-toggle" aria-label="Switch to dark mode">🌙</button>
       <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <!-- MENU OVERLAY -->
   <div class="menu-overlay" id="menuOverlay">
     <nav class="menu-links">
       <a href="index.html"      class="menu-link-item"><span class="menu-num">01</span><span class="menu-label">Home</span></a>
@@ -39,155 +38,143 @@
       <a href="values.html"     class="menu-link-item"><span class="menu-num">05</span><span class="menu-label">Values</span></a>
     </nav>
     <div class="menu-info">
-      <div class="menu-info-group">
-        <p class="menu-info-label">Location</p>
-        <p class="menu-info-val">Philadelphia, PA<br>/ New Jersey area</p>
-      </div>
-      <div class="menu-info-group">
-        <p class="menu-info-label">Email</p>
-        <div class="menu-info-val"><a href="mailto:your@email.com">your@email.com</a></div>
-      </div>
-      <div class="menu-info-group">
-        <p class="menu-info-label">Social</p>
-        <div class="menu-info-val">
-          <a href="#" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="#" target="_blank" rel="noopener">GitHub</a>
-        </div>
-      </div>
-      <div class="menu-info-group">
-        <p class="menu-info-label">Resume</p>
-        <div class="menu-info-val"><a href="#" target="_blank" rel="noopener">Download PDF</a></div>
-      </div>
+      <div><p class="menu-info-label">Location</p><p class="menu-info-val">Philadelphia, PA / New Jersey area</p></div>
+      <div><p class="menu-info-label">Email</p><div class="menu-info-val"><a href="mailto:your@email.com">your@email.com</a></div></div>
+      <div><p class="menu-info-label">Social</p><div class="menu-info-val"><a href="#" target="_blank">LinkedIn</a><a href="#" target="_blank">GitHub</a></div></div>
+      <div><p class="menu-info-label">Resume</p><div class="menu-info-val"><a href="#" target="_blank">Download PDF ↗</a></div></div>
     </div>
   </div>
 
-  <!-- PAGE CONTENT -->
   <main>
-
     <div class="exp-header">
-      <h1 class="page-heading">Work</h1>
+      <h1 class="page-heading">Work <span class="sparkle">✦</span></h1>
     </div>
 
-    <!-- ── TPNI ENTRY ──────────────────────────────────────── -->
-    <section class="exp-entry" data-reveal>
-      <div class="exp-entry-top">
-        <div class="exp-entry-left">
-          <p class="label">Current Role</p>
-          <h2 class="exp-role">Software Engineering &amp;<br>AI Solutions Intern</h2>
-          <p class="exp-company">TPNI / Building Agents</p>
-        </div>
-        <div class="exp-entry-right">
-          <!-- ✏️ DATES: Update with actual dates -->
-          <p class="exp-date">March 2026 – Present</p>
-          <p class="exp-type">Remote</p>
-          <span class="exp-badge">Current</span>
-        </div>
+    <!-- ── MAIN EXPERIENCE ENTRY ── -->
+    <div class="exp-grid">
+
+      <!-- Left: role meta -->
+      <div class="exp-meta-col">
+        <p class="label-rose" style="margin-bottom:10px;">Experience</p>
+        <p class="exp-company">TPNI / Building Agents</p>
+        <p class="exp-role">Marketing and Technology Intern</p>
+        <!-- ✏️ DATES: Update with actual start date -->
+        <p class="exp-dates">May 2024 – Present</p>
+        <p class="exp-location">Remote</p>
+        <span class="badge badge-done" style="margin-top:12px;display:inline-block;">Current</span>
       </div>
 
-      <div class="exp-summary">
-        <p>
-          a role that lives exactly where i want to be: at the intersection of
-          AI product development, software engineering, business workflows, and
-          making complex things understandable to real people. i build.
-          i debug. i translate.
+      <!-- Right: details -->
+      <div class="exp-detail-col" data-reveal>
+        <p class="exp-summary">
+          I work at the intersection of technology, AI tools, business workflows, content strategy, and technical communication. I'm especially interested in software development, AI, data, cybersecurity, and tech consulting — and I love making technical ideas understandable.
         </p>
-      </div>
-
-      <!-- Numbered responsibility list — [01] [02] style -->
-      <div class="exp-items">
-        <div class="exp-item">
-          <span class="exp-item-num">[01]</span>
-          <p>created LinkedIn posts, newsletters, and outreach content explaining custom AI agents and automation tools for businesses</p>
-        </div>
-        <div class="exp-item">
-          <span class="exp-item-num">[02]</span>
-          <p>translated technical product ideas into clear, business-friendly messaging for non-technical audiences</p>
-        </div>
-        <div class="exp-item">
-          <span class="exp-item-num">[03]</span>
-          <p>supported content strategy around workflow automation, custom software, pricing tools, sales training tools, and operational efficiency</p>
-        </div>
-        <div class="exp-item">
-          <span class="exp-item-num">[04]</span>
-          <p>moved into hands-on coding work: helping with apps, debugging code, improving features, and building my own project</p>
-        </div>
-      </div>
-
-      <!-- Skills -->
-      <div class="exp-skills">
-        <p class="label">Skills used</p>
-        <div class="exp-skill-tags">
-          <span>AI tools</span>
-          <span>app development</span>
-          <span>debugging</span>
-          <span>technical writing</span>
-          <span>content strategy</span>
-          <span>workflow automation</span>
-          <span>business messaging</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── DIVIDER ─────────────────────────────────────────── -->
-    <div class="divider"></div>
-
-    <!-- ── OWLHACKS ENTRY ─────────────────────────────────── -->
-    <section class="exp-entry" data-reveal>
-      <div class="exp-entry-top">
-        <div class="exp-entry-left">
-          <p class="label">Hackathon</p>
-          <h2 class="exp-role">Participant &amp;<br>Award Winner</h2>
-          <p class="exp-company">OWLHacks · Temple University</p>
-        </div>
-        <div class="exp-entry-right">
-          <p class="exp-date">September 2023</p>
-          <p class="exp-type">Philadelphia, PA</p>
-          <span class="exp-badge exp-badge-award">🏆 Best Beginner Hack</span>
-        </div>
-      </div>
-
-      <div class="exp-summary">
-        <p>
-          built KeepPhillySafe with a team in under 24 hours — designed,
-          coded, and pitched to a panel of judges and industry mentors.
-          proof that good ideas + fast execution = results.
+        <p class="exp-summary" style="margin-top:8px;">
+          I work at the intersection of technology, AI, business workflows, marketing/content strategy, technical communication, software development, debugging, and app improvement — and I think that combination is exactly where I want to be.
         </p>
+
+        <!-- Responsibility bullets -->
+        <div class="exp-bullets">
+          <div class="exp-bullet-item">
+            <span class="bullet-dot">·</span>
+            <p>Created LinkedIn posts, newsletters, and outreach content explaining custom AI agents and automation tools for businesses.</p>
+          </div>
+          <div class="exp-bullet-item">
+            <span class="bullet-dot">·</span>
+            <p>Translated technical product ideas into clear, business-friendly messaging for non-technical audiences.</p>
+          </div>
+          <div class="exp-bullet-item">
+            <span class="bullet-dot">·</span>
+            <p>Supported content strategy around workflow automation, custom software, pricing tools, sales training tools, and operational efficiency.</p>
+          </div>
+          <div class="exp-bullet-item">
+            <span class="bullet-dot">·</span>
+            <p>Recently started moving into more hands-on coding work — helping with apps, debugging code, improving features, and building my own app/project.</p>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="exp-skills" data-reveal>
+          <p class="label-rose" style="margin-bottom:10px;">Skills Used</p>
+          <div class="exp-skill-tags">
+            <span class="tag tag-rose">AI Tools</span>
+            <span class="tag tag-rose">App Development</span>
+            <span class="tag">Technical Writing</span>
+            <span class="tag">Content Strategy</span>
+            <span class="tag">Workflow Automation</span>
+            <span class="tag">Business Messaging</span>
+            <span class="tag">Debugging</span>
+            <span class="tag">Communication</span>
+          </div>
+        </div>
+
+        <!-- Education inline summary -->
+        <div class="exp-edu-summary" data-reveal>
+          <p class="label-rose" style="margin-bottom:10px;">Education</p>
+          <div class="edu-inline-row">
+            <div>
+              <p class="edu-inline-school">Temple University</p>
+              <p class="edu-inline-degree">B.S. Computer Science</p>
+              <p class="edu-inline-dates">2022 – 2026</p>
+            </div>
+          </div>
+
+          <!-- Coursework chips -->
+          <div class="edu-inline-courses">
+            <span>Data Structures & Algorithms</span>
+            <span>Software Development</span>
+            <span>Operating Systems</span>
+            <span>Cybersecurity / Software Security</span>
+            <span>Digital Forensics</span>
+            <span>Web Development</span>
+            <span>User Experience Design</span>
+            <span>Probability & Statistics</span>
+          </div>
+        </div>
+
+        <!-- Currently section -->
+        <div class="exp-currently" data-reveal>
+          <p class="label-rose" style="margin-bottom:10px;">Currently</p>
+          <div class="exp-currently-list">
+            <p>🩷 <strong>building</strong> Temple Crawler</p>
+            <p>✦ <strong>learning</strong> AI tools, app dev, debugging, deployment, and product thinking</p>
+            <p>🔍 <strong>goal</strong> to keep building, keep improving, and working on a team where I can learn + add real value</p>
+          </div>
+        </div>
+
       </div>
+    </div><!-- /exp-grid -->
 
-      <div class="exp-items">
-        <div class="exp-item">
-          <span class="exp-item-num">[01]</span>
-          <p>collaborated in a team to design and build a working technical prototype in under 24 hours</p>
-        </div>
-        <div class="exp-item">
-          <span class="exp-item-num">[02]</span>
-          <p>built KeepPhillySafe: an interactive map app visualizing Philadelphia crime data with a safety-score feature</p>
-        </div>
-        <div class="exp-item">
-          <span class="exp-item-num">[03]</span>
-          <p>pitched the solution to judges and industry mentors — awarded best beginner hack</p>
+    <!-- OWLHacks entry -->
+    <div class="exp-grid exp-grid-secondary" data-reveal>
+      <div class="exp-meta-col">
+        <p class="label-rose" style="margin-bottom:10px;">Hackathon</p>
+        <p class="exp-company">OWLHacks</p>
+        <p class="exp-role">Participant & Award Winner</p>
+        <p class="exp-dates">September 2023</p>
+        <p class="exp-location">Temple University</p>
+        <span class="exp-award-badge">🏆 Best Beginner Hack</span>
+      </div>
+      <div class="exp-detail-col">
+        <p class="exp-summary">
+          Built KeepPhillySafe with a team in under 24 hours. Designed, coded, and presented to a panel of judges. Awarded Best Beginner Hack among competing teams — proof that curiosity + fast execution = results.
+        </p>
+        <div class="exp-skills" style="margin-top:16px;">
+          <div class="exp-skill-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Streamlit</span>
+            <span class="tag">Leaflet</span>
+            <span class="tag">Folium</span>
+            <span class="tag">Data Visualization</span>
+            <span class="tag">Rapid Prototyping</span>
+          </div>
         </div>
       </div>
+    </div>
 
-      <div class="exp-skills">
-        <p class="label">Skills used</p>
-        <div class="exp-skill-tags">
-          <span>Python</span>
-          <span>Streamlit</span>
-          <span>Leaflet</span>
-          <span>Folium</span>
-          <span>data visualization</span>
-          <span>rapid prototyping</span>
-          <span>pitching</span>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- ── CERTIFICATIONS ─────────────────────────────────── -->
-    <section class="exp-certs" data-reveal>
-      <p class="label" style="margin-bottom:24px;">Certifications</p>
+    <!-- Certs -->
+    <div class="exp-certs" data-reveal>
+      <p class="label-rose" style="margin-bottom:16px;">Certifications</p>
       <div class="certs-list">
         <div class="cert-row">
           <p class="cert-name">Generative AI for Software Development</p>
@@ -197,45 +184,32 @@
           <p class="cert-name">Introduction to Zero Trust (LFS183)</p>
           <p class="cert-source">The Linux Foundation</p>
         </div>
-        <!-- ✏️ CERTS: Add more certifications here as you earn them -->
       </div>
-    </section>
+    </div>
 
   </main>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-top">
-      <div>
-        <p class="footer-tagline">Building where tech meets real people</p>
-        <a href="mailto:your@email.com" class="footer-email">your@email.com</a>
-      </div>
-      <div class="footer-col">
-        <p class="footer-col-label">Social</p>
-        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="#" target="_blank" rel="noopener">GitHub</a>
-      </div>
-      <div class="footer-col">
-        <p class="footer-col-label">Sections</p>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="experience.html">Work</a>
-        <a href="values.html">Values</a>
-      </div>
-      <div class="footer-col">
-        <p class="footer-col-label">Resume</p>
-        <a href="#" target="_blank" rel="noopener">Download PDF</a>
-      </div>
+      <div><p class="footer-tagline">A Swiss Army Knife in Tech + Business</p>
+        <a href="mailto:your@email.com" class="footer-email">your@email.com</a></div>
+      <div class="footer-col"><p class="footer-col-label">Social</p>
+        <a href="#" target="_blank">LinkedIn</a><a href="#" target="_blank">GitHub</a></div>
+      <div class="footer-col"><p class="footer-col-label">Sections</p>
+        <a href="about.html">About</a><a href="projects.html">Projects</a>
+        <a href="experience.html">Work</a><a href="values.html">Values</a></div>
+      <div class="footer-col"><p class="footer-col-label">Resume</p>
+        <a href="#" target="_blank">Download PDF ↗</a></div>
     </div>
     <div class="footer-marquee" aria-hidden="true">
       <div class="footer-marquee-inner">
-        <span>Rhea Patel ✦</span><span>Rhea Patel ✦</span><span>Rhea Patel ✦</span>
-        <span>Rhea Patel ✦</span><span>Rhea Patel ✦</span><span>Rhea Patel ✦</span>
-        <span>Rhea Patel ✦</span><span>Rhea Patel ✦</span>
+        <span>IT'S RHEA PATEL ✦</span><span>IT'S RHEA PATEL ✦</span>
+        <span>IT'S RHEA PATEL ✦</span><span>IT'S RHEA PATEL ✦</span>
+        <span>IT'S RHEA PATEL ✦</span><span>IT'S RHEA PATEL ✦</span>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© <span id="year"></span> Rhea Patel.</p>
+      <p>© <span class="js-year"></span> Rhea Patel.</p>
       <p>built with curiosity + too many open tabs</p>
       <p>currently in: Philadelphia / New Jersey area</p>
     </div>
