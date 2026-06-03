@@ -230,6 +230,12 @@ body.dark .award-float {
   font-style: italic;
   margin-top: -3px;
 }
+.card-desc {
+  font-size: 0.76rem;
+  color: var(--ink-muted);
+  line-height: 1.65;
+  margin-top: 2px;
+}
 .card-actions {
   display: flex;
   flex-wrap: wrap;
