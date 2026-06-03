@@ -148,6 +148,32 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
+  /* ── HERO HEADLINE TYPING (homepage only) ──────────────── */
+  /* Types "I'm Rhea Patel." one character at a time on load.  */
+  /* ✏️ EDIT: Change the text by updating data-text on         */
+  /*   .typed-headline in index.html, not here.                */
+  const typedEl  = document.querySelector('.typed-headline');
+  const cursorEl = document.querySelector('.typing-cursor');
+
+  if (typedEl && cursorEl) {
+    const text     = typedEl.dataset.text || '';
+    const CHAR_MS  = 90;   // ms between characters — lower = faster
+    const START_MS = 400;  // ms before typing begins
+
+    let i = 0;
+    function tick() {
+      if (i < text.length) {
+        typedEl.textContent += text[i];
+        i++;
+        setTimeout(tick, CHAR_MS);
+      }
+      // Typing done — cursor keeps blinking (CSS handles it)
+    }
+
+    setTimeout(tick, START_MS);
+  }
+
+
   /* ── PROJECT FILTER (projects.html only) ────────────────── */
   const filterBtns  = document.querySelectorAll('.filter-btn');
   const projectCards = document.querySelectorAll('.project-card[data-cats]');

@@ -9,7 +9,7 @@
 ================================================================ */
 
 /* ── GOOGLE FONTS ─────────────────────────────────────────────
-   Main sans: DM Sans — clean, friendly, modern, not overdone
+   Main sans: Manrope — clean, modern, warm weight range
    Accent:    Playfair Display italic — elegant, personal, chic
    Mono:      DM Mono — labels and metadata
    ✏️ FONTS: Replace font links in HTML + variable names below
@@ -18,24 +18,24 @@
 /* ── LIGHT MODE TOKENS (default) ─────────────────────────────── */
 :root {
   /* ✏️ BACKGROUND / SURFACE */
-  --bg:          #FAF8F5;   /* warm ivory page background */
-  --bg-2:        #F5F1EC;   /* slightly deeper ivory, cards/sections */
-  --surface:     #FFFFFF;   /* pure white for cards */
-  --surface-alt: #F9F4F0;   /* soft blush card background */
+  --bg:          #FFFAF7;   /* warm ivory page background */
+  --bg-2:        #F5EFE8;   /* slightly deeper ivory, cards/sections */
+  --surface:     #FFFDFB;   /* near-white for cards */
+  --surface-alt: #F5EBE4;   /* soft beige card background */
 
   /* ✏️ TEXT */
-  --ink:         #1A1410;   /* near-black, main text */
-  --ink-mid:     #3D3530;   /* charcoal, secondary text */
-  --ink-muted:   #8C827A;   /* warm gray, labels/metadata */
-  --ink-ghost:   #D4CBC4;   /* very light, dividers/borders */
+  --ink:         #16110F;   /* near-black espresso, main text */
+  --ink-mid:     #3A2E28;   /* charcoal, secondary text */
+  --ink-muted:   #756F6A;   /* warm gray, labels/metadata */
+  --ink-ghost:   #EADED8;   /* very light beige, dividers/borders */
 
   /* ✏️ ACCENT — blush/rose/mauve palette */
-  --blush:       #F2C4CE;   /* soft blush pink — badges, hover borders */
-  --rose:        #D4899A;   /* dusty rose — active states, links */
-  --mauve:       #C9A0AC;   /* muted mauve — selected text, accents */
-  --blush-bg:    #FDF0F3;   /* very pale pink — card/section tint */
-  --blush-bg-2:  #F7E8ED;   /* slightly deeper blush bg */
-  --gold-soft:   #C9A96E;   /* muted gold — star cursor, sparkles */
+  --blush:       #F3B6C8;   /* soft blush pink — badges, hover borders */
+  --rose:        #D8849D;   /* dusty rose — active states, links */
+  --mauve:       #C9A7B6;   /* muted mauve — selected text, accents */
+  --blush-bg:    #FDEEF3;   /* very pale pink — card/section tint */
+  --blush-bg-2:  #F7E2EC;   /* slightly deeper blush bg */
+  --gold-soft:   #C9A55F;   /* muted gold — star cursor, sparkles */
 
   /* Status colors */
   --status-done-bg:   #F0F7EE;
@@ -44,42 +44,42 @@
   --status-wip-text:  #9A6820;
 
   /* Footer */
-  --footer-bg:   #1A1410;
-  --footer-text: rgba(250,248,245,0.85);
+  --footer-bg:   #18110D;
+  --footer-text: rgba(255,250,242,0.85);
 
   /* UI */
   --nav-h:      60px;
   --radius-sm:   6px;
   --radius-md:  10px;
   --radius-lg:  16px;
-  --shadow-sm:  0 1px 8px rgba(26,20,16,0.06);
-  --shadow-md:  0 4px 24px rgba(26,20,16,0.10);
+  --shadow-sm:  0 1px 8px rgba(22,17,15,0.06);
+  --shadow-md:  0 4px 28px rgba(22,17,15,0.10);
   --ease:       0.22s cubic-bezier(0.4,0,0.2,1);
 
   /* Fonts */
-  --font-sans:   'DM Sans', 'Helvetica Neue', sans-serif;
+  --font-sans:   'Manrope', 'Helvetica Neue', sans-serif;
   --font-accent: 'Playfair Display', Georgia, serif;
   --font-mono:   'DM Mono', monospace;
 }
 
 /* ── DARK MODE TOKENS ─────────────────────────────────────────── */
 body.dark {
-  --bg:          #1C1714;   /* deep espresso/charcoal */
-  --bg-2:        #231E1A;   /* slightly lighter */
-  --surface:     #2A2420;   /* card background */
-  --surface-alt: #2F2826;   /* slightly warmer card */
+  --bg:          #15110F;   /* deep espresso/charcoal */
+  --bg-2:        #1E1816;   /* slightly lighter */
+  --surface:     #272018;   /* card background */
+  --surface-alt: #2E2520;   /* slightly warmer card */
 
-  --ink:         #F5F0EB;   /* warm off-white */
-  --ink-mid:     #C8BEB6;   /* warm medium gray */
+  --ink:         #FFF8F2;   /* warm off-white */
+  --ink-mid:     #C9BDB5;   /* warm medium gray */
   --ink-muted:   #7A6E68;   /* muted warm gray */
-  --ink-ghost:   #3A3230;   /* dark dividers */
+  --ink-ghost:   #3A2D29;   /* dark dividers */
 
-  --blush:       #C4849A;   /* slightly deeper blush for dark bg */
-  --rose:        #D4899A;   /* same rose works on dark */
-  --mauve:       #B08890;
-  --blush-bg:    #2E2226;   /* dark blush-tinted card */
+  --blush:       #E7A6B9;   /* brighter blush for dark bg */
+  --rose:        #F2A9BF;   /* lighter rose works on dark */
+  --mauve:       #D2A9B9;
+  --blush-bg:    #2A1D22;   /* dark blush-tinted card */
   --blush-bg-2:  #341E24;
-  --gold-soft:   #C9A96E;
+  --gold-soft:   #D8BB75;
 
   --status-done-bg:   #1E2E1A;
   --status-done-text: #7AC06A;
@@ -87,11 +87,19 @@ body.dark {
   --status-wip-text:  #C99040;
 
   --footer-bg:   #100E0C;
-  --footer-text: rgba(245,240,235,0.75);
+  --footer-text: rgba(255,250,242,0.75);
 
-  --shadow-sm:  0 1px 8px rgba(0,0,0,0.28);
-  --shadow-md:  0 4px 24px rgba(0,0,0,0.38);
+  --shadow-sm:  0 1px 8px rgba(0,0,0,0.32);
+  --shadow-md:  0 4px 28px rgba(0,0,0,0.42);
 }
+
+/* ── CONTAINER ────────────────────────────────────────────────── */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+@media (max-width: 860px) { .container { padding: 0 20px; } }
 
 /* ── RESET ────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
