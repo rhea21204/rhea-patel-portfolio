@@ -22,18 +22,29 @@
   max-width: 48%;
 }
 
-.hero-hello {
-  font-size: clamp(1rem, 1.8vw, 1.35rem);
-  font-weight: 500;
-  color: var(--ink-mid);
-  margin-bottom: 0.1rem;
+.code-kicker {
+  font-family: var(--font-mono);
+  font-size: clamp(0.82rem, 1.2vw, 1rem);
+  letter-spacing: -0.01em;
+  line-height: 1;
+  margin-bottom: 0.85rem;
   animation: heroFadeUp 0.6s 0.05s ease both;
 }
-.hero-hello .accent {
-  font-size: 1.12em;
-  color: var(--rose);
-  letter-spacing: -0.02em;
+.code-function {
+  color: var(--ink-mid);
+  font-weight: 500;
 }
+.code-string {
+  color: var(--rose);
+  font-weight: 400;
+}
+.code-punc {
+  color: var(--ink-muted);
+  font-weight: 400;
+}
+body.dark .code-function { color: var(--ink-mid); }
+body.dark .code-string    { color: var(--rose); }
+body.dark .code-punc      { color: var(--ink-muted); }
 
 .hero-name {
   font-size: clamp(3rem, 6.5vw, 6rem);
@@ -48,12 +59,15 @@
 
 /* Blinking cursor sits at end of the typed headline */
 .typing-cursor {
-  color: var(--ink);
-  font-weight: 300;
-  letter-spacing: 0;
-  animation: blink-headline 1s step-end infinite;
+  display: inline-block;
+  width: 2px;
+  height: 0.82em;
+  margin-left: 0.1em;
+  background: var(--ink-muted);
+  vertical-align: -0.06em;
+  animation: blink-headline 0.9s steps(1) infinite;
 }
-body.dark .typing-cursor { color: var(--ink); } /* var(--ink) = off-white in dark mode */
+body.dark .typing-cursor { background: var(--ink-mid); }
 
 @keyframes blink-headline {
   0%, 100% { opacity: 1; }
