@@ -17,7 +17,7 @@
     <a href="index.html" class="nav-logo">Rhea Patel</a>
     <div class="nav-right">
       <ul class="nav-links">
-        <li><a href="about.html"      data-page="about.html" class="active">About</a></li>
+        <li><a href="about.html"      data-page="about.html">About</a></li>
         <li><a href="projects.html"   data-page="projects.html">Projects</a></li>
         <li><a href="experience.html" data-page="experience.html">Work</a></li>
         <li><a href="#" class="nav-resume" target="_blank" rel="noopener">Resume ↗</a></li>
@@ -40,124 +40,156 @@
     <div class="menu-info">
       <div><p class="menu-info-label">Location</p><p class="menu-info-val">Philadelphia, PA / New Jersey area</p></div>
       <div><p class="menu-info-label">Email</p><div class="menu-info-val"><a href="mailto:your@email.com">your@email.com</a></div></div>
-      <div><p class="menu-info-label">Social</p><div class="menu-info-val"><a href="#" target="_blank">LinkedIn</a><a href="#" target="_blank">GitHub</a></div></div>
-      <div><p class="menu-info-label">Resume</p><div class="menu-info-val"><a href="#" target="_blank">Download PDF ↗</a></div></div>
+      <div><p class="menu-info-label">Social</p><div class="menu-info-val"><a href="#" target="_blank" rel="noopener">LinkedIn</a><a href="#" target="_blank" rel="noopener">GitHub</a></div></div>
+      <div><p class="menu-info-label">Resume</p><div class="menu-info-val"><a href="#" target="_blank" rel="noopener">Download PDF ↗</a></div></div>
     </div>
   </div>
 
   <main>
-    <!-- Page heading -->
-    <div class="about-header">
-      <h1 class="page-heading">About <span class="sparkle">✦</span></h1>
-    </div>
+    <div class="about-page-wrap">
 
-    <!-- 2-column story layout -->
-    <div class="about-grid">
+      <!-- ── PAGE HEADER ── -->
+      <div class="about-header">
+        <h1 class="page-heading">ABOUT <span class="sparkle">✦</span></h1>
+      </div>
 
-      <!-- LEFT: photo + label -->
-      <div class="about-left">
-        <p class="label" style="margin-bottom:20px;">My Story</p>
-        <!--
-          ✏️ PHOTO: Replace placeholder with:
-          <img src="assets/images/rhea-about.jpg" alt="Rhea Patel" class="about-photo"/>
-        -->
-        <div class="about-photo-placeholder">
-          <span>🌸</span>
-          <p class="photo-caption-text">photo coming soon</p>
+      <!-- ── STORY SECTION ── -->
+      <div class="about-story">
+
+        <!-- LEFT: label + polaroid -->
+        <div class="about-photo-col">
+          <span class="story-label">My Story</span>
+
+          <div class="about-photo-stack">
+            <!-- pink tape strip -->
+            <div class="photo-tape"></div>
+
+            <!-- white polaroid frame -->
+            <div class="polaroid-card">
+              <div class="polaroid-image">
+                <!--
+                  ✏️ PHOTO: replace this div with:
+                  <img src="assets/images/rhea.jpg" alt="Rhea Patel" class="polaroid-photo"/>
+                -->
+                <span class="polaroid-placeholder-text">photo coming soon ✦</span>
+              </div>
+              <!-- heart doodle in bottom-right of frame -->
+              <span class="heart-doodle">♡</span>
+            </div>
+          </div>
+        </div><!-- /about-photo-col -->
+
+        <!-- RIGHT: story text -->
+        <div class="about-story-text" data-reveal>
+          <p class="about-intro">
+            hi! i'm rhea — a Computer Science graduate who loves
+            <span class="accent">building</span> useful things and learning how technology
+            can solve real problems. i enjoy the mix of logic + creativity,
+            coding + communication, and tech + business.
+          </p>
+          <p>
+            i'm especially interested in software development, AI tools, data analysis,
+            cybersecurity, and tech consulting — but i also care about explaining technical
+            ideas in a way that actually makes sense to people.
+          </p>
+          <p>
+            i like projects that feel practical, thoughtful, and human. whether i'm debugging
+            code, writing about AI tools, or building a new app, i care about making the final
+            result useful for the person on the other side.
+          </p>
+        </div><!-- /about-story-text -->
+
+      </div><!-- /about-story -->
+
+      <!-- ── EDUCATION + CURRENTLY ── -->
+      <div class="about-info-row">
+
+        <!-- EDUCATION -->
+        <div class="about-education" data-reveal>
+          <p class="info-section-label">Education</p>
+          <p class="edu-school">Temple University</p>
+          <p class="edu-degree">B.S. Computer Science</p>
+          <p class="coursework-label">Relevant Coursework</p>
+          <div class="course-chips">
+            <span>Data Structures &amp; Algorithms</span>
+            <span>Software Development</span>
+            <span>Operating Systems</span>
+            <span>Cybersecurity / Software Security</span>
+            <span>Digital Forensics</span>
+            <span>Web Development</span>
+            <span>User Experience Design</span>
+            <span>Probability &amp; Statistics</span>
+            <span>Project-Based Programming</span>
+          </div>
+        </div><!-- /about-education -->
+
+        <!-- CURRENTLY -->
+        <div class="about-currently" data-reveal>
+          <p class="info-section-label">Currently</p>
+
+          <div class="currently-row">
+            <span class="c-bullet">♡</span>
+            <div>
+              <p class="c-key">building</p>
+              <p class="c-val">Temple Crawler</p>
+            </div>
+          </div>
+
+          <div class="currently-row">
+            <span class="c-bullet">✦</span>
+            <div>
+              <p class="c-key">learning</p>
+              <p class="c-val">AI tools, app development, debugging, deployment, and more</p>
+            </div>
+          </div>
+
+          <div class="currently-row">
+            <span class="c-bullet">✦</span>
+            <div>
+              <p class="c-key">goal</p>
+              <p class="c-val">to keep growing, building impactful projects, and working on a team where i can learn + create real value</p>
+            </div>
+          </div>
+        </div><!-- /about-currently -->
+
+      </div><!-- /about-info-row -->
+
+      <!-- ── QUOTE BOX ── -->
+      <div class="about-quote-wrap" data-reveal>
+        <div class="about-quote">
+          <p class="quote-text">
+            "i believe in learning by doing, asking questions, and making sure what i build actually helps someone."
+          </p>
+          <span class="quote-heart">♡</span>
         </div>
       </div>
 
-      <!-- RIGHT: story text -->
-      <div class="about-right" data-reveal>
-        <p class="about-intro">
-          hi! i'm rhea — a Computer Science graduate who loves <span class="accent">building</span>
-          useful things and learning how technology can solve practical problems.
-        </p>
-        <p>
-          i'm especially interested in software development, AI tools, data analysis,
-          cybersecurity, and tech consulting — but i also care a lot about communication
-          and creativity. i love making technical ideas easier to understand for the people
-          who need them most. building good communication is just as important as good code.
-        </p>
-        <p>
-          i work at the intersection of technology, AI, business workflows, content strategy,
-          and technical communication. i'm someone who can write code AND explain it clearly —
-          and i think that combination is rare and valuable.
-        </p>
-        <p>
-          "i believe in learning by doing, asking questions, and making sure what i build actually helps someone." 🩷
-        </p>
-
-        <!-- Education block -->
-        <div class="about-edu" data-reveal>
-          <p class="label-rose" style="margin-bottom:14px;">Education</p>
-          <p class="edu-school">Temple University</p>
-          <p class="edu-degree">B.S. Computer Science</p>
-          <p class="edu-dates">Philadelphia, PA · 2022 – 2026</p>
-
-          <div class="about-courses">
-            <p class="label" style="margin:14px 0 8px;">Relevant Coursework</p>
-            <div class="course-chips">
-              <span>Data Structures & Algorithms</span>
-              <span>Software Development</span>
-              <span>Operating Systems</span>
-              <span>Cybersecurity / Software Security</span>
-              <span>Digital Forensics</span>
-              <span>Web Development</span>
-              <span>UX Design</span>
-              <span>Probability & Statistics</span>
-              <span>Project-Based Programming</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Currently -->
-        <div class="about-currently" data-reveal>
-          <p class="label-rose" style="margin-bottom:14px;">Currently</p>
-          <div class="currently-row">
-            <span class="c-bullet">🩷</span>
-            <div><p class="c-key">building</p><p class="c-val">Temple Crawler — my current app project</p></div>
-          </div>
-          <div class="currently-row">
-            <span class="c-bullet">✦</span>
-            <div><p class="c-key">learning</p><p class="c-val">AI tools, app development, debugging, and deployment</p></div>
-          </div>
-          <div class="currently-row">
-            <span class="c-bullet">🔍</span>
-            <div><p class="c-key">goal</p><p class="c-val">to keep building impactful projects, and working on a team where i can learn + create real value</p></div>
-          </div>
-        </div>
-
-        <!-- Skills I use -->
-        <div class="about-skills" data-reveal>
-          <p class="label-rose" style="margin-bottom:14px;">Skills I Use</p>
-          <div class="skills-chips">
-            <span class="tag tag-rose">AI Tools</span>
-            <span class="tag">Content Strategy</span>
-            <span class="tag">Technical Writing</span>
-            <span class="tag">Workflow Automation</span>
-            <span class="tag tag-rose">App Development</span>
-            <span class="tag">Debugging</span>
-            <span class="tag">Communication</span>
-            <span class="tag">Business Thinking</span>
-          </div>
-        </div>
-
-      </div><!-- /about-right -->
-    </div><!-- /about-grid -->
+    </div><!-- /about-page-wrap -->
   </main>
 
   <footer class="footer">
     <div class="footer-top">
-      <div><p class="footer-tagline">A Swiss Army Knife in Tech + Business</p>
-        <a href="mailto:your@email.com" class="footer-email">your@email.com</a></div>
-      <div class="footer-col"><p class="footer-col-label">Social</p>
-        <a href="#" target="_blank">LinkedIn</a><a href="#" target="_blank">GitHub</a></div>
-      <div class="footer-col"><p class="footer-col-label">Sections</p>
-        <a href="about.html">About</a><a href="projects.html">Projects</a>
-        <a href="experience.html">Work</a><a href="values.html">Values</a></div>
-      <div class="footer-col"><p class="footer-col-label">Resume</p>
-        <a href="#" target="_blank">Download PDF ↗</a></div>
+      <div>
+        <p class="footer-tagline">A Swiss Army Knife in Tech + Business</p>
+        <!-- ✏️ EMAIL -->
+        <a href="mailto:your@email.com" class="footer-email">your@email.com</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-label">Social</p>
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-label">Sections</p>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="experience.html">Work</a>
+        <a href="values.html">Values</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-label">Resume</p>
+        <a href="#" target="_blank" rel="noopener">Download PDF ↗</a>
+      </div>
     </div>
     <div class="footer-marquee" aria-hidden="true">
       <div class="footer-marquee-inner">

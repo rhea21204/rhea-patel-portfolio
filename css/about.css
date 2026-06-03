@@ -1,94 +1,213 @@
 /* css/about.css */
 
+/* ── PAGE WRAP ──────────────────────────────────────────────── */
+.about-page-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ── PAGE HEADER ────────────────────────────────────────────── */
 .about-header {
-  padding: 52px 40px 32px;
-  border-bottom: 1px solid var(--ink-ghost);
+  padding: 4rem 0 2.75rem;
 }
-.sparkle { color: var(--rose); font-size: 0.45em; vertical-align: super; }
 
-/* 2-column layout */
-.about-grid {
+/* ── STORY SECTION ──────────────────────────────────────────── */
+.about-story {
   display: grid;
-  grid-template-columns: 240px 1fr;
+  grid-template-columns: 320px 1fr;
+  gap: 4.5rem;
+  padding-bottom: 4rem;
+  align-items: start;
 }
 
-/* LEFT */
-.about-left {
-  padding: 40px 28px 40px 40px;
-  border-right: 1px solid var(--ink-ghost);
+/* ── PHOTO COLUMN ───────────────────────────────────────────── */
+.about-photo-col {
+  padding-top: 0.25rem;
 }
 
-.about-photo-placeholder {
-  width: 100%;
-  max-width: 180px;
-  aspect-ratio: 3/4;
-  background: linear-gradient(160deg, var(--blush-bg) 0%, var(--blush-bg-2) 100%);
-  border: 1px solid var(--blush);
-  border-radius: var(--radius-md);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  font-size: 2rem;
-  box-shadow: var(--shadow-sm);
-}
-body.dark .about-photo-placeholder {
-  background: linear-gradient(160deg, var(--blush-bg) 0%, var(--surface-alt) 100%);
-}
-
-/* Real photo */
-.about-photo {
-  width: 100%;
-  max-width: 180px;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
-}
-
-.photo-caption-text {
-  font-size: 0.62rem;
+.story-label {
+  display: block;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
   color: var(--rose);
-  letter-spacing: 0.06em;
-  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Polaroid stack wrapper — tilted as a whole */
+.about-photo-stack {
+  position: relative;
+  width: 280px;
+  transform: rotate(-3deg);
+  margin-top: 4px;
+}
+
+/* Pink tape strip across the top */
+.photo-tape {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+  width: 170px;
+  height: 32px;
+  background: rgba(232, 155, 176, 0.52);
+  border-radius: 3px;
+  z-index: 3;
+  /* subtle texture lines */
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 12px,
+    rgba(255,255,255,0.18) 12px,
+    rgba(255,255,255,0.18) 13px
+  );
+}
+body.dark .photo-tape {
+  background: rgba(200, 110, 140, 0.42);
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 12px,
+    rgba(255,255,255,0.10) 12px,
+    rgba(255,255,255,0.10) 13px
+  );
+}
+
+/* White photo frame */
+.polaroid-card {
+  background: #fffdfb;
+  padding: 14px 14px 48px;
+  border: 1px solid #e8dcd4;
+  box-shadow:
+    0 2px 6px rgba(70,40,30,0.08),
+    0 14px 40px rgba(70,40,30,0.13);
+  position: relative;
+}
+body.dark .polaroid-card {
+  background: #2c2018;
+  border-color: #3a2d26;
+  box-shadow:
+    0 2px 6px rgba(0,0,0,0.3),
+    0 14px 40px rgba(0,0,0,0.4);
+}
+
+/* Inner photo/placeholder area */
+.polaroid-image {
+  height: 260px;
+  background: linear-gradient(135deg, #fdeef3 0%, #f7e7df 100%);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  position: relative;
+}
+body.dark .polaroid-image {
+  background: linear-gradient(135deg, #2e1c24 0%, #261810 100%);
+}
+
+/* Real photo: swap placeholder div for <img class="polaroid-photo"> */
+.polaroid-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.polaroid-placeholder-text {
+  font-size: 0.59rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  color: var(--rose);
+  opacity: 0.65;
+}
+
+/* Heart doodle bottom-right of frame */
+.heart-doodle {
+  position: absolute;
+  right: 18px;
+  bottom: 11px;
+  color: var(--rose);
+  font-size: 1.5rem;
+  font-family: var(--font-accent);
   opacity: 0.75;
+  line-height: 1;
 }
 
-/* RIGHT */
-.about-right {
-  padding: 40px 40px 52px;
+/* ── STORY TEXT ─────────────────────────────────────────────── */
+.about-story-text {
+  padding-top: 2.25rem; /* visually align first paragraph with polaroid top */
 }
+
 .about-intro {
-  font-size: 1.05rem;
+  font-size: 1.06rem;
   font-weight: 500;
-  line-height: 1.7;
+  line-height: 1.75;
   color: var(--ink);
-  margin-bottom: 20px;
+  margin-bottom: 1.2rem;
 }
-.about-intro .accent { color: var(--rose); font-size: 1.1em; }
-.about-right p {
-  font-size: 0.88rem;
-  color: var(--ink-mid);
-  line-height: 1.8;
-  margin-bottom: 16px;
-  max-width: 680px;
+.about-intro .accent {
+  font-family: var(--font-accent);
+  font-style: italic;
+  color: var(--rose);
 }
 
-/* Education */
-.about-edu {
-  background: var(--surface-alt);
-  border: 1px solid var(--ink-ghost);
-  border-radius: var(--radius-md);
-  padding: 20px;
-  margin: 28px 0;
-  max-width: 680px;
+.about-story-text p {
+  font-size: 0.875rem;
+  color: var(--ink-mid);
+  line-height: 1.87;
+  margin-bottom: 1rem;
 }
-body.dark .about-edu {
-  background: var(--surface);
-  border-color: var(--ink-ghost);
+.about-story-text p:last-child { margin-bottom: 0; }
+
+/* ── EDUCATION + CURRENTLY ──────────────────────────────────── */
+.about-info-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  padding: 3rem 0 3.5rem;
+  border-top: 1px solid var(--ink-ghost);
 }
-.edu-school { font-size: 1.05rem; font-weight: 700; color: var(--ink); margin-bottom: 3px; }
-.edu-degree { font-size: 0.82rem; color: var(--rose); margin-bottom: 2px; }
-.edu-dates  { font-family: var(--font-mono); font-size: 0.7rem; color: var(--ink-muted); }
+
+/* Section label with trailing line */
+.info-section-label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--rose);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+.info-section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--ink-ghost);
+}
+
+.edu-school {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 3px;
+}
+.edu-degree {
+  font-size: 0.82rem;
+  color: var(--rose);
+  margin-bottom: 1.25rem;
+}
+
+.coursework-label {
+  font-size: 0.57rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 10px;
+}
 
 .course-chips {
   display: flex;
@@ -96,10 +215,9 @@ body.dark .about-edu {
   gap: 5px;
 }
 .course-chips span {
-  font-size: 0.68rem;
+  font-size: 0.67rem;
   font-weight: 500;
-  letter-spacing: 0.04em;
-  padding: 4px 10px;
+  padding: 4px 11px;
   background: var(--surface);
   border: 1px solid var(--ink-ghost);
   border-radius: 100px;
@@ -107,49 +225,100 @@ body.dark .about-edu {
   transition: border-color var(--ease), color var(--ease);
 }
 .course-chips span:hover { border-color: var(--rose); color: var(--rose); }
-body.dark .course-chips span { background: var(--bg); }
+body.dark .course-chips span { background: var(--bg-2); }
 
-/* Currently section */
-.about-currently {
-  max-width: 680px;
-  margin: 0 0 24px;
-  border: 1px solid var(--blush);
-  border-radius: var(--radius-md);
-  padding: 20px;
-  background: var(--blush-bg);
-}
-body.dark .about-currently {
-  background: var(--blush-bg);
-  border-color: var(--ink-ghost);
-}
+/* Currently rows */
 .currently-row {
   display: flex;
-  gap: 10px;
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(212, 137, 154, 0.18);
+  gap: 11px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--ink-ghost);
 }
 .currently-row:last-child { border-bottom: none; padding-bottom: 0; }
-.c-bullet { font-size: 0.85rem; flex-shrink: 0; margin-top: 1px; color: var(--rose); }
+.c-bullet {
+  font-size: 0.78rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: var(--rose);
+  line-height: 1.2;
+}
 .c-key {
-  font-size: 0.6rem;
+  font-size: 0.58rem;
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--rose);
-  margin-bottom: 2px;
+  margin-bottom: 3px;
 }
-.c-val { font-size: 0.78rem; color: var(--ink-mid); line-height: 1.5; }
+.c-val {
+  font-size: 0.8rem;
+  color: var(--ink-mid);
+  line-height: 1.55;
+}
 
-/* Skills */
-.about-skills { max-width: 680px; }
-.skills-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+/* ── QUOTE BOX ──────────────────────────────────────────────── */
+.about-quote-wrap {
+  padding-bottom: 4.5rem;
+}
+.about-quote {
+  background: var(--blush-bg);
+  border: 1px solid var(--blush);
+  border-radius: 16px;
+  padding: 2.5rem 3rem;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+body.dark .about-quote {
+  background: var(--blush-bg);
+  border-color: var(--ink-ghost);
+}
+.quote-text {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--ink);
+  line-height: 1.72;
+  flex: 1;
+}
+.quote-heart {
+  font-family: var(--font-accent);
+  font-size: 2.75rem;
+  color: var(--rose);
+  opacity: 0.5;
+  flex-shrink: 0;
+  line-height: 1;
+  user-select: none;
+}
 
-/* RESPONSIVE */
-@media (max-width: 860px) {
-  .about-header { padding: 36px 20px 24px; }
-  .about-grid   { grid-template-columns: 1fr; }
-  .about-left   { border-right: none; border-bottom: 1px solid var(--ink-ghost); padding: 32px 20px; }
-  .about-right  { padding: 32px 20px 48px; }
-  .about-photo-placeholder { max-width: 140px; }
-  .about-edu, .about-currently { max-width: 100%; }
+/* ── RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .about-page-wrap { padding: 0 20px; }
+  .about-header    { padding: 3rem 0 2rem; }
+
+  .about-story {
+    grid-template-columns: 1fr;
+    gap: 2.75rem;
+    padding-bottom: 3rem;
+  }
+  .about-photo-col  { display: flex; flex-direction: column; align-items: center; }
+  .about-photo-stack { margin: 0 auto; }
+  .about-story-text { padding-top: 0; }
+
+  .about-info-row {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2.5rem 0 3rem;
+  }
+
+  .about-quote { flex-direction: column; gap: 1rem; padding: 2rem 1.75rem; text-align: center; }
+  .quote-heart { font-size: 2rem; }
+  .about-quote-wrap { padding-bottom: 3rem; }
+}
+
+@media (max-width: 480px) {
+  .about-photo-stack { width: 240px; }
+  .polaroid-image    { height: 210px; }
+  .about-quote       { padding: 1.75rem 1.25rem; }
+  .quote-text        { font-size: 0.95rem; }
 }
