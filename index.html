@@ -89,17 +89,162 @@
 
           <!-- RIGHT: photo / image card -->
           <div class="hero-image-wrap">
-            <!--
-              ✏️ PHOTO: Replace placeholder with:
-              <img src="assets/images/rhea-hero.jpg" alt="Rhea Patel" class="hero-photo" />
-            -->
-            <div class="hero-photo-card">
-              <span class="hero-photo-sparkle" aria-hidden="true">✦</span>
-              <div class="hero-photo-inner">
-                <span class="photo-emoji">🌸</span>
-                <p class="photo-label">photo coming soon</p>
-              </div>
-            </div>
+            <div class="hero-illustration">
+<style>
+@keyframes floatUp {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+@keyframes floatDown {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(6px); }
+}
+@keyframes sway {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(3deg); }
+  75% { transform: rotate(-3deg); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 0.45; }
+  50% { opacity: 0.9; }
+}
+@keyframes sparkle {
+  0%, 100% { opacity: 0.4; transform: scale(1) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.3) rotate(20deg); }
+}
+
+.flower-1 { animation: sway 3.5s ease-in-out infinite; transform-origin: 105px 100px; }
+.flower-2 { animation: sway 4s ease-in-out infinite 0.5s; transform-origin: 140px 100px; }
+.flower-3 { animation: sway 3.2s ease-in-out infinite 1s; transform-origin: 170px 100px; }
+.node-tl { animation: floatUp 4s ease-in-out infinite; }
+.node-tr { animation: floatUp 4s ease-in-out infinite 1s; }
+.node-bl { animation: floatDown 3.5s ease-in-out infinite 0.5s; }
+.node-br { animation: floatDown 3.5s ease-in-out infinite 1.5s; }
+.conn-lines { animation: pulse 3s ease-in-out infinite; }
+.sparkle-1 { animation: sparkle 2.5s ease-in-out infinite; }
+.sparkle-2 { animation: sparkle 3s ease-in-out infinite 0.8s; }
+.sparkle-3 { animation: sparkle 2.8s ease-in-out infinite 1.4s; }
+.sparkle-4 { animation: sparkle 3.2s ease-in-out infinite 0.4s; }
+</style>
+<svg width="100%" viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg" style="max-width:480px;display:block;margin:0 auto;">
+
+  <!-- faint grid -->
+  <line x1="20"  y1="60"  x2="20"  y2="240" stroke="#EDE5D8" stroke-width=".5"/>
+  <line x1="60"  y1="40"  x2="60"  y2="240" stroke="#EDE5D8" stroke-width=".5"/>
+  <line x1="100" y1="30"  x2="100" y2="240" stroke="#EDE5D8" stroke-width=".5"/>
+  <line x1="140" y1="20"  x2="140" y2="240" stroke="#EDE5D8" stroke-width=".5"/>
+  <line x1="180" y1="30"  x2="180" y2="240" stroke="#EDE5D8" stroke-width=".5"/>
+  <line x1="220" y1="40"  x2="220" y2="240" stroke="#EDE5D8" stroke-width=".5"/>
+  <line x1="260" y1="60"  x2="260" y2="240" stroke="#EDE5D8" stroke-width=".5"/>
+  <line x1="20"  y1="70"  x2="260" y2="70"  stroke="#EDE5D8" stroke-width=".5"/>
+  <line x1="20"  y1="110" x2="260" y2="110" stroke="#EDE5D8" stroke-width=".5"/>
+  <line x1="20"  y1="150" x2="260" y2="150" stroke="#EDE5D8" stroke-width=".5"/>
+  <line x1="20"  y1="190" x2="260" y2="190" stroke="#EDE5D8" stroke-width=".5"/>
+
+  <!-- node connection lines -->
+  <g class="conn-lines">
+    <line x1="140" y1="120" x2="30"  y2="80"  stroke="#D4899A" stroke-width=".9" opacity=".45"/>
+    <line x1="140" y1="120" x2="248" y2="75"  stroke="#C9A0AC" stroke-width=".9" opacity=".45"/>
+    <line x1="140" y1="120" x2="22"  y2="170" stroke="#C9A0AC" stroke-width=".9" opacity=".35"/>
+    <line x1="140" y1="120" x2="255" y2="168" stroke="#D4899A" stroke-width=".9" opacity=".35"/>
+    <line x1="30"  y1="80"  x2="22"  y2="170" stroke="#D4CBC4" stroke-width=".8" opacity=".5"/>
+    <line x1="248" y1="75"  x2="255" y2="168" stroke="#D4CBC4" stroke-width=".8" opacity=".5"/>
+    <line x1="30"  y1="80"  x2="248" y2="75"  stroke="#D4CBC4" stroke-width=".7" opacity=".35"/>
+  </g>
+
+  <!-- laptop base -->
+  <rect x="68" y="208" width="144" height="16" rx="5" fill="#D4CBC4"/>
+  <rect x="62" y="220" width="156" height="8"  rx="3" fill="#C8BEB6"/>
+  <rect x="80"  y="211" width="36" height="5" rx="2" fill="#BDB5AF"/>
+  <rect x="122" y="211" width="24" height="5" rx="2" fill="#BDB5AF"/>
+  <rect x="152" y="211" width="36" height="5" rx="2" fill="#BDB5AF"/>
+
+  <!-- laptop screen -->
+  <rect x="72" y="100" width="136" height="112" rx="7" fill="#F7EEF2" stroke="#D4899A" stroke-width="1.4"/>
+  <rect x="80" y="108" width="120" height="96"  rx="4" fill="#FDF6F8"/>
+
+  <!-- code lines on screen -->
+  <rect x="88" y="116" width="38" height="4" rx="2" fill="#D4899A" opacity=".55"/>
+  <rect x="88" y="125" width="58" height="4" rx="2" fill="#C9A0AC" opacity=".45"/>
+  <rect x="88" y="134" width="46" height="4" rx="2" fill="#D4899A" opacity=".38"/>
+  <rect x="88" y="143" width="64" height="4" rx="2" fill="#C9A0AC" opacity=".38"/>
+  <rect x="88" y="152" width="32" height="4" rx="2" fill="#D4899A" opacity=".3"/>
+  <rect x="88" y="161" width="52" height="4" rx="2" fill="#C9A0AC" opacity=".28"/>
+  <rect x="88" y="170" width="40" height="4" rx="2" fill="#D4899A" opacity=".25"/>
+  <rect x="132" y="116" width="2.5" height="14" rx="1" fill="#D4899A" opacity=".8"/>
+
+  <!-- flower 1 -->
+  <g class="flower-1">
+    <path d="M105 100 C104 86 100 78 98 66"  fill="none" stroke="#A8C090" stroke-width="1.6" stroke-linecap="round"/>
+    <circle cx="98" cy="62" r="6.5" fill="#F2C4CE"/>
+    <circle cx="91" cy="57" r="5.5" fill="#EDA8BC"/>
+    <circle cx="105" cy="57" r="5.5" fill="#EDA8BC"/>
+    <circle cx="98"  cy="51" r="5.5" fill="#F2C4CE"/>
+    <circle cx="91"  cy="67" r="5"   fill="#F7D8E3"/>
+    <circle cx="105" cy="67" r="5"   fill="#F7D8E3"/>
+    <circle cx="98"  cy="62" r="4"   fill="#FAF4F6"/>
+  </g>
+
+  <!-- flower 2 -->
+  <g class="flower-2">
+    <path d="M140 100 C140 84 142 74 144 60" fill="none" stroke="#A8C090" stroke-width="1.6" stroke-linecap="round"/>
+    <circle cx="144" cy="56" r="5.5" fill="#F7D8E3"/>
+    <circle cx="138" cy="51" r="4.5" fill="#F2C4CE"/>
+    <circle cx="150" cy="51" r="4.5" fill="#EDA8BC"/>
+    <circle cx="144" cy="46" r="4.5" fill="#F7D8E3"/>
+    <circle cx="138" cy="61" r="4"   fill="#F2C4CE"/>
+    <circle cx="150" cy="61" r="4"   fill="#F2C4CE"/>
+    <circle cx="144" cy="56" r="3.5" fill="#FAF4F6"/>
+  </g>
+
+  <!-- flower 3 -->
+  <g class="flower-3">
+    <path d="M170 100 C172 88 176 80 180 68" fill="none" stroke="#A8C090" stroke-width="1.6" stroke-linecap="round"/>
+    <circle cx="180" cy="64" r="5"   fill="#F2C4CE"/>
+    <circle cx="175" cy="59" r="4"   fill="#EDA8BC"/>
+    <circle cx="185" cy="59" r="4"   fill="#F7D8E3"/>
+    <circle cx="180" cy="54" r="4"   fill="#F2C4CE"/>
+    <circle cx="180" cy="64" r="3"   fill="#FAF4F6"/>
+  </g>
+
+  <!-- leaves -->
+  <ellipse cx="112" cy="82" rx="9" ry="5" fill="#B8D0A0" opacity=".75" transform="rotate(-35 112 82)"/>
+  <ellipse cx="155" cy="78" rx="8" ry="4" fill="#A8C090" opacity=".7"  transform="rotate(25 155 78)"/>
+  <ellipse cx="168" cy="86" rx="7" ry="4" fill="#B8D0A0" opacity=".65" transform="rotate(-15 168 86)"/>
+
+  <!-- skill nodes -->
+  <g class="node-tl">
+    <circle cx="30"  cy="80"  r="18" fill="#FDF0F3" stroke="#D4899A" stroke-width="1.3"/>
+    <text x="30" y="77" text-anchor="middle" font-family="monospace" font-size="8" fill="#A06070">py</text>
+    <text x="30" y="88" text-anchor="middle" font-family="monospace" font-size="7" fill="#C9A0AC">Python</text>
+  </g>
+
+  <g class="node-tr">
+    <circle cx="248" cy="75"  r="18" fill="#F5EEF7" stroke="#C9A0AC" stroke-width="1.3"/>
+    <text x="248" y="72" text-anchor="middle" font-family="monospace" font-size="8" fill="#8a6070">AI</text>
+    <text x="248" y="83" text-anchor="middle" font-family="monospace" font-size="7" fill="#C9A0AC">tools</text>
+  </g>
+
+  <g class="node-bl">
+    <circle cx="22"  cy="170" r="16" fill="#FDF0F3" stroke="#D4899A" stroke-width="1.1"/>
+    <text x="22" y="167" text-anchor="middle" font-family="monospace" font-size="7" fill="#A06070">{ }</text>
+    <text x="22" y="178" text-anchor="middle" font-family="monospace" font-size="7" fill="#C9A0AC">data</text>
+  </g>
+
+  <g class="node-br">
+    <circle cx="255" cy="168" r="16" fill="#F5EEF7" stroke="#C9A0AC" stroke-width="1.1"/>
+    <text x="255" y="165" text-anchor="middle" font-family="monospace" font-size="7" fill="#8a6070">&lt;/&gt;</text>
+    <text x="255" y="176" text-anchor="middle" font-family="monospace" font-size="7" fill="#C9A0AC">dev</text>
+  </g>
+
+  <!-- sparkles -->
+  <text class="sparkle-1" x="232" y="118" font-size="13" fill="#C9A96E" opacity=".9">✦</text>
+  <text class="sparkle-2" x="38"  y="130" font-size="10" fill="#D4899A" opacity=".7">✦</text>
+  <text class="sparkle-3" x="200" y="50"  font-size="9"  fill="#D4899A" opacity=".6">✦</text>
+  <text class="sparkle-4" x="52"  y="52"  font-size="8"  fill="#C9A0AC" opacity=".5">✦</text>
+
+</svg>
+</div>
           </div><!-- /hero-image-wrap -->
 
         </div><!-- /hero-inner -->

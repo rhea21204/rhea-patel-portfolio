@@ -450,3 +450,11 @@ body.dark .cp-col { border-right-color: var(--ink-ghost); }
   .wid-card:first-child { border-top: none; padding-top: 0 !important; }
   .location-inner { flex-direction: column; align-items: flex-start; gap: 4px; }
 }
+
+.hero-illustration {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0;
+}

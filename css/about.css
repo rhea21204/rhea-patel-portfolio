@@ -36,91 +36,18 @@
   margin-bottom: 2rem;
 }
 
-/* Polaroid stack wrapper — tilted as a whole */
-.about-photo-stack {
-  position: relative;
-  width: 280px;
-  transform: rotate(-3deg);
-  margin-top: 4px;
-}
 
-/* Pink tape strip across the top */
-.photo-tape {
-  position: absolute;
-  top: -16px;
-  left: 50%;
-  transform: translateX(-50%) rotate(-2deg);
-  width: 170px;
-  height: 32px;
-  background: rgba(232, 155, 176, 0.52);
-  border-radius: 3px;
-  z-index: 3;
-  /* subtle texture lines */
-  background-image: repeating-linear-gradient(
-    90deg,
-    transparent,
-    transparent 12px,
-    rgba(255,255,255,0.18) 12px,
-    rgba(255,255,255,0.18) 13px
-  );
-}
-body.dark .photo-tape {
-  background: rgba(200, 110, 140, 0.42);
-  background-image: repeating-linear-gradient(
-    90deg,
-    transparent,
-    transparent 12px,
-    rgba(255,255,255,0.10) 12px,
-    rgba(255,255,255,0.10) 13px
-  );
-}
-
-/* White photo frame */
-.polaroid-card {
-  background: #fffdfb;
-  padding: 14px 14px 48px;
-  border: 1px solid #e8dcd4;
-  box-shadow:
-    0 2px 6px rgba(70,40,30,0.08),
-    0 14px 40px rgba(70,40,30,0.13);
-  position: relative;
-}
-body.dark .polaroid-card {
-  background: #2c2018;
-  border-color: #3a2d26;
-  box-shadow:
-    0 2px 6px rgba(0,0,0,0.3),
-    0 14px 40px rgba(0,0,0,0.4);
-}
-
-/* Inner photo/placeholder area */
-.polaroid-image {
-  height: 260px;
-  background: linear-gradient(135deg, #fdeef3 0%, #f7e7df 100%);
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-  position: relative;
-}
-body.dark .polaroid-image {
-  background: linear-gradient(135deg, #2e1c24 0%, #261810 100%);
-}
-
-/* Real photo: swap placeholder div for <img class="polaroid-photo"> */
-.polaroid-photo {
-  width: 100%;
-  height: 100%;
+.about-photo {
+  width: 350px;
+  height: 350px;
   object-fit: cover;
-  display: block;
+  object-position: center 15%;
+  border-radius: 10px;
+  border-top: 3px solid #D4899A;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  flex-shrink: 0;
 }
 
-.polaroid-placeholder-text {
-  font-size: 0.59rem;
-  font-weight: 600;
-  letter-spacing: 0.13em;
-  color: var(--rose);
-  opacity: 0.65;
-}
 
 /* Heart doodle bottom-right of frame */
 .heart-doodle {
@@ -302,7 +229,6 @@ body.dark .about-quote {
     padding-bottom: 3rem;
   }
   .about-photo-col  { display: flex; flex-direction: column; align-items: center; }
-  .about-photo-stack { margin: 0 auto; }
   .about-story-text { padding-top: 0; }
 
   .about-info-row {
@@ -317,8 +243,6 @@ body.dark .about-quote {
 }
 
 @media (max-width: 480px) {
-  .about-photo-stack { width: 240px; }
-  .polaroid-image    { height: 210px; }
-  .about-quote       { padding: 1.75rem 1.25rem; }
-  .quote-text        { font-size: 0.95rem; }
+  .about-quote  { padding: 1.75rem 1.25rem; }
+  .quote-text   { font-size: 0.95rem; }
 }
